@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Sarmiento for Mayor`,
+    description: `Santa Ana City Council Member Vicente Sarmiento is running for Mayor of Santa Ana`,
+    author: `@kenput3r`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

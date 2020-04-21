@@ -28,13 +28,12 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          backgroundColor:"#f2f2f2",
+          margin: `0 auto`
         }}
       >
         <main>{children}</main>
-        <footer>
+        <footer style={{backgroundColor:"#ffffff", padding:20}}>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
