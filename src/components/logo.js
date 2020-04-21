@@ -30,7 +30,7 @@ const Logo = () => {
     }
   `)
 
-  return <Img fluid={data.logo.childImageSharp.fluid} {...styles} />
+  return <Img fluid={data.logo.childImageSharp.fluid} {...styles} alt="text reading: Vicente Sarmiento For Mayor" />
 }
 
 export default Logo

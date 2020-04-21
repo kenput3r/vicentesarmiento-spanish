@@ -26,7 +26,7 @@ const Instagram = () => {
     }
   `)
 
-  return <Img fixed={data.instagram.childImageSharp.fixed} />
+  return <Img fixed={data.instagram.childImageSharp.fixed} alt="instagram icon" />
 }
 
 export default Instagram

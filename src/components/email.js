@@ -26,7 +26,7 @@ const Email = () => {
     }
   `)
 
-  return <Img fixed={data.email.childImageSharp.fixed} />
+  return <Img fixed={data.email.childImageSharp.fixed} alt="paper airplane icon"/>
 }
 
 export default Email

@@ -26,7 +26,7 @@ const Facebook = () => {
     }
   `)
 
-  return <Img fixed={data.facebook.childImageSharp.fixed} />
+  return <Img fixed={data.facebook.childImageSharp.fixed} alt="facebook icon" />
 }
 
 export default Facebook

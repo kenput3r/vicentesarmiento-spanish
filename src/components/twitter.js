@@ -26,7 +26,7 @@ const Twitter = () => {
     }
   `)
 
-  return <Img fixed={data.twitter.childImageSharp.fixed} />
+  return <Img fixed={data.twitter.childImageSharp.fixed} alt="twitter icon" />
 }
 
 export default Twitter
