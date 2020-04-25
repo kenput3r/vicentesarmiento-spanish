@@ -50,10 +50,10 @@ const Header = ({ siteTitle }) => {
           </h1>
         </div>
         <div style={{display:"inline-block", width:"50%", textAlign:"right", verticalAlign:"top"}}>
-          <a style={buttonStyles} href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">DONATE</a>
+          <a className="button" style={buttonStyles} href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">DONATE</a>
         </div>
       </div>
-      <div>
+      <div id="HeroContainer">
         <Hero />
       </div>
       {/* <div style={{textAlign:"center", marginTop:badgeLift}}>

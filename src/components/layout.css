@@ -628,4 +628,15 @@ footer a {
   html {
     font-size: 100%;
   }
+
+  .button {
+    padding: 10px !important;
+  }
+  #HeroContainer .gatsby-image-wrapper {
+    height: 100vh;
+  }
+
+  #HeroContainer .gatsby-image-wrapper picture img {
+    height: 100vh;
+  }
 }
