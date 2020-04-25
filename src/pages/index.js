@@ -9,16 +9,16 @@ const IndexPage = () => (
     <div style={{padding: `0 1.0875rem 1.45rem`}}>
       <div style={{maxWidth:960, margin:"0 auto"}}>
         <h2>About Vicente</h2>
-        <p>In January of 2007, Vicente Sarmiento was appointed to the Santa Ana City Council to represent Ward 1. He was formally elected in November 2008, November 2012, November 2016 and is currently serving his third term.</p>
-        <p>Mr. Sarmiento is currently the President of the Orange County Water District Board of Directors. He also is the Chairman of the Oversight Board of the Successor Agency to the former Redevelopment Agency for the City of Santa Ana. The Oversight Board has the fiduciary responsibility of handling the dissolution of the City’s former Redevelopment Agency. Mr. Sarmiento also chairs the City Council Committees for Development and Transportation, and Legislation; and he’s also a member of the Finance, Economic Development & Technology Committee.</p>
+        <p>Vicente Sarmiento has proudly represented Ward 1 on the Santa Ana City Council since 2007. </p>
+        <p>Councilmember Sarmiento is currently the President of the Orange County Water District Board of Directors.  He also served as the City Council’s Mayor Pro Tem, and was Chairman of the Oversight Board of the Successor Agency to the former Redevelopment Agency for the City of Santa Ana.  Councilmember Sarmiento also chaired the City Council Committees for Development and Transportation, and Legislation, and he was a member of the Finance, Economic Development & Technology Committee.</p>
         <p>
-        Mr. Sarmiento graduated from the University of California, Berkeley with a Bachelor of Arts in Economics. He received his Juris Doctorate from the University of California, Los Angeles School of Law. More recently, he attended the Kennedy School of Government at Harvard University and successfully completed the Certificate Program for Senior Executives in State and Local Government.
+        During his time on the City Council, Councilmember Sarmiento’s priorities are to increase park space, reduce homelessness, provide more affordable housing for our working families, invest in youth programs, and support efforts to make our neighborhoods safer.  He helped draft the Housing Opportunity Ordinance, ensured a fiscal reserve fund was created in the aftermath of the 2008 Economic Recession, and lead the City Council’s adoption of public policies to protect the rights of all immigrants in Santa Ana.
         </p>
         <p>
-        Mr. Sarmiento is also a Board Member with the Joint Center for Political and Economic Studies based out of George Washington University. He was selected as one of the fourteen leaders from across the country to join the NewDEAL, a national network that is committed to highlighting innovative ideas from state and local elected leaders who are pro-growth progressives. 
+        Councilmember Sarmiento graduated from the University of California, Berkeley with a Bachelor of Arts in Economics.  He received his Juris Doctorate from the University of California, Los Angeles School of Law.  More recently, he attended the Kennedy School of Government at Harvard University and successfully completed the Program for Senior Executives in State and Local Government.
         </p>
         <p>
-        Councilmember Sarmiento was also a member of the Board of Directors with The National Association of Latino Elected and Appointed Officials (NALEO).
+        Councilmember Sarmiento, his wife, Eva, and their three children live in a 1929 historic home they restored, just three blocks from where he grew up.  Their family has lived in Santa Ana and Orange County since 1965.
         </p>
       </div>
     </div>

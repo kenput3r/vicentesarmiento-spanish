@@ -56,11 +56,11 @@ const Header = ({ siteTitle }) => {
       <div>
         <Hero />
       </div>
-      <div style={{textAlign:"center", marginTop:badgeLift}}>
+      {/* <div style={{textAlign:"center", marginTop:badgeLift}}>
         <div style={{maxWidth:300, margin:"0 auto"}}>
           <Badge />
         </div>
-      </div>
+      </div> */}
     </header>
   )
 }
