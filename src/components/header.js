@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => {
       >
         <div style={{display:"inline-block", width:"50%"}}>
           <h1 style={{ margin: 0, maxWidth: 400 }}>
-            <Logo />
+            <a href="/" title="Vicente Sarmiento for Mayor"><Logo /></a>
           </h1>
         </div>
         <div style={{display:"inline-block", width:"50%", textAlign:"right", verticalAlign:"top"}}>
