@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 
 const Contact = () => {
-  window._ctct_m = "236ab3f5001288a34f7143956ce8948b"
 
   const form_styles = {
     maxWidth: 600,
@@ -10,6 +9,8 @@ const Contact = () => {
   }
 
   useEffect(() => {
+    if (typeof window !== 'undefined')
+      window._ctct_m = "236ab3f5001288a34f7143956ce8948b"
     const signup_script = document.createElement("script")
     signup_script.src = "//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js"
     signup_script.async = true
