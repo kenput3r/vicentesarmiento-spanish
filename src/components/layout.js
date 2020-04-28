@@ -16,6 +16,7 @@ import Facebook from "./facebook"
 import Instagram from "./instagram"
 import Twitter from "./twitter"
 import Email from "./email"
+import Donate from "./donate"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -39,10 +40,13 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer style={{backgroundColor:"#ffffff", padding:20}}>
-          <div style={{width:"50%", display:"inline-block"}}>
+          <div className="paid-for-by">
             Paid for by Sarmiento for Mayor 2020 #1425828
           </div>
-          <div style={{width:"50%", display:"inline-block", textAlign:"right"}}>
+          <div className="donate" style={{verticalAlign:"top"}}>
+            <Donate />
+          </div>
+          <div className="social">
             <a href="https://www.facebook.com/SarmientoForMayor/" title="Vicente Sarmiento on Facebook">
               <Facebook />
             </a>

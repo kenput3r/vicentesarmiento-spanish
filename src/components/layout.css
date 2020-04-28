@@ -246,7 +246,7 @@ h2 {
   padding-top: 20px;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: Georgia, serif;;
+  font-family: Georgia, serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -622,8 +622,43 @@ pre tt:after {
   height: 100%;
 }
 footer a {
-  margin-left: 15px;
+  margin: 0 15px;
+  padding: 5px;
 }
+
+/*contact form*/
+.ctct-form-embed.form_0 .ctct-form-defaults, div.ctct-form-embed div.ctct-form-defaults {
+  background-color: transparent !important;
+}
+.g-recaptcha, p.ctct-form-footer {
+  display: none;
+}
+
+h2.ctct-form-header {
+  font-family: Georgia, serif !important;
+}
+
+/*footer*/
+
+footer .paid-for-by, footer .donate, footer .social {
+  display: inline-block;
+  text-align: center;
+  width: 33%;
+}
+
+footer .paid-for-by, footer .social {
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+
+footer .button {
+  padding: 10px !important;
+}
+
+.button:hover {
+  background-color: #2c56b2 !important;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
@@ -632,11 +667,19 @@ footer a {
   .button {
     padding: 10px !important;
   }
+
   #HeroContainer .gatsby-image-wrapper {
     height: 100vh;
   }
 
   #HeroContainer .gatsby-image-wrapper picture img {
     height: 100vh;
+  }
+
+  footer .paid-for-by, footer .donate, footer .social {
+    display: inline-block;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
   }
 }

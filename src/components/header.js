@@ -3,15 +3,7 @@ import React, { useState, useEffect } from "react"
 import Logo from "./logo"
 import Hero from "./hero"
 import Badge from "./badge"
-
-const buttonStyles = {
-  backgroundColor: "#224289",
-  color: "#fff",
-  display: "inline-block",
-  padding: 15,
-  textDecoration: "none",
-  verticalAlign: "top"
-}
+import Donate from "./donate"
 
 const Header = ({ siteTitle }) => {
   const [badgeLift, setBadgeLift] = useState(0)
@@ -50,7 +42,7 @@ const Header = ({ siteTitle }) => {
           </h1>
         </div>
         <div style={{display:"inline-block", width:"50%", textAlign:"right", verticalAlign:"top"}}>
-          <a className="button" style={buttonStyles} href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">DONATE</a>
+          <Donate />
         </div>
       </div>
       <div id="HeroContainer">

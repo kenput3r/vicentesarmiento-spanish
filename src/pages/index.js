@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Videos from "../components/videos"
+import Contact from "../components/contact"
 
 const IndexPage = () => (
   <Layout>
@@ -23,6 +24,7 @@ const IndexPage = () => (
       </div>
     </div>
     <Videos />
+    <Contact />
   </Layout>
 )
 
