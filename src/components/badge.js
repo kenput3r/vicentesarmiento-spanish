@@ -16,7 +16,7 @@ import Img from "gatsby-image"
 const Badge = () => {
   const data = useStaticQuery(graphql`
     query {
-      badge: file(relativePath: { eq: "santa-ana-city-logo.png" }) {
+      badge: file(relativePath: { eq: "water-tower-circle.png" }) {
         childImageSharp {
           fluid(maxWidth: 500, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -26,7 +26,7 @@ const Badge = () => {
     }
   `)
 
-  return <Img fluid={data.badge.childImageSharp.fluid} alt="Santa Ana City Logo" />
+  return <Img fluid={data.badge.childImageSharp.fluid} alt="Water Tower Icon with text Chente con la Genete" />
 }
 
 export default Badge

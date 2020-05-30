@@ -9,7 +9,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div style={{padding: `0 1.0875rem 1.45rem`}}>
       <div style={{maxWidth:960, margin:"0 auto"}}>
-        <h2>About Vicente</h2>
+        <h2>About Councilmember Vicente Sarmiento</h2>
         <p>Vicente Sarmiento has proudly represented Ward 1 on the Santa Ana City Council since 2007.</p>
         <p>Councilmember Sarmiento is currently the President of the Orange County Water District Board of Directors.  He also served as the City Council’s Mayor Pro Tem, and was Chairman of the Oversight Board of the Successor Agency to the former Redevelopment Agency for the City of Santa Ana.  Councilmember Sarmiento chaired the City Council Committees for Development, Transportation, and Legislation.  He was also a member of the Finance, Economic Development & Technology Committee.</p>
         <p>

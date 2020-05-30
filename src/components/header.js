@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => {
     window.addEventListener('scroll', e => {
       if(window.scrollY > lastScrollY) {
         setLastScrollY(window.scrollY)
-        if(window.scrollY <= 200) {
+        if(window.scrollY <= 150) {
           setBadgeLift(window.scrollY * -1)
         }
       }
