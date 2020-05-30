@@ -609,6 +609,37 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+.desktop-link {
+  display: inline-block;
+}
+.desktop-link a {
+  color: #fff;
+  border-bottom: inset transparent;
+  display: block;
+  padding: 15px;
+  margin-right: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.desktop-link a:hover {
+  border-bottom: inset #fff;
+}
+.gallery-image {
+  display: inline-block;
+  padding:1.5%;
+  width: 30%;
+}
+.page-header .button:hover {
+  background-color: rgb(244, 242, 242) !important;
+  color: #224289;
+  text-decoration: underline;
+
+}
+.page-title {
+  margin-bottom: 0;
+  padding: 30px;
+  text-align: center;
+}
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */

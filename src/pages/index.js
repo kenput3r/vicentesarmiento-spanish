@@ -1,13 +1,15 @@
 import React from "react"
 import Layout from "../components/layout"
+import Header from "../components/header"
 import SEO from "../components/seo"
 import Videos from "../components/videos"
 import Contact from "../components/contact"
 
 const IndexPage = () => (
   <Layout>
+    <Header />
     <SEO title="Home" />
-    <div style={{padding: `0 1.0875rem 1.45rem`}}>
+    <div style={{backgroundColor: `#f2f2f2`, padding: `0 1.0875rem 1.45rem`}}>
       <div style={{maxWidth:960, margin:"0 auto"}}>
         <h2>About Councilmember Vicente Sarmiento</h2>
         <p>Vicente Sarmiento has proudly represented Ward 1 on the Santa Ana City Council since 2007.</p>

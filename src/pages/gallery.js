@@ -1,44 +1,94 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import PageHeader from "../components/PageHeader"
 import SEO from "../components/seo"
 
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 
 const Gallery = ({ data }) => {
   return (
   <Layout>
+    <PageHeader />
     <SEO title="Photos Of Vicente Sarmiento" />
-    <h1>Gallery</h1>
-    <Img fluid={data.img1.childImageSharp.fluid} />
-    <Img fluid={data.img2.childImageSharp.fluid} />
-    <Img fluid={data.img3.childImageSharp.fluid} />
-    <Img fluid={data.img4.childImageSharp.fluid} />
-    <Img fluid={data.img5.childImageSharp.fluid} />
-    <Img fluid={data.img6.childImageSharp.fluid} />
-    <Img fluid={data.img7.childImageSharp.fluid} />
-    <Img fluid={data.img8.childImageSharp.fluid} />
-    <Img fluid={data.img9.childImageSharp.fluid} />
-    <Img fluid={data.img10.childImageSharp.fluid} />
-    <Img fluid={data.img11.childImageSharp.fluid} />
-    <Img fluid={data.img12.childImageSharp.fluid} />
-    <Img fluid={data.img13.childImageSharp.fluid} />
-    <Img fluid={data.img14.childImageSharp.fluid} />
-    <Img fluid={data.img15.childImageSharp.fluid} />
-    <Img fluid={data.img16.childImageSharp.fluid} />
-    <Img fluid={data.img17.childImageSharp.fluid} />
-    <Img fluid={data.img18.childImageSharp.fluid} />
-    <Img fluid={data.img19.childImageSharp.fluid} />
-    <Img fluid={data.img20.childImageSharp.fluid} />
-    <Img fluid={data.img21.childImageSharp.fluid} />
-    <Img fluid={data.img22.childImageSharp.fluid} />
+    <div className="content" style={{marginTop:191}}>
+      <h1 className="page-title">Gallery</h1>
+      <div style={{textAlign: "center"}}>
+        <div className="gallery-image">
+          <Img fluid={data.img1.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img2.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img3.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img4.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img5.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img6.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img7.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img8.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img9.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+        <Img fluid={data.img10.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img11.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img12.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img13.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img14.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img15.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img16.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img17.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img18.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img19.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img20.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">
+          <Img fluid={data.img21.childImageSharp.fluid} />
+        </div>
+        <div className="gallery-image">    
+          <Img fluid={data.img22.childImageSharp.fluid} />
+        </div>
+      </div>
+    </div>
   </Layout>
   )
 }
 
-export const Image1 = graphql`
+export const Images = graphql`
 query {
   img1: file(relativePath: { eq: "gallery/vicente-sarmiento-1.jpg" }) {
     childImageSharp {

@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
 import "./layout.css"
 
 import Facebook from "./facebook"
@@ -19,22 +18,11 @@ import Email from "./email"
 import Donate from "./donate"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          backgroundColor:"#f2f2f2",
+          backgroundColor:"#fff",
           margin: `0 auto`
         }}
       >

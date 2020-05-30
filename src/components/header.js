@@ -1,30 +1,30 @@
-import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
 import Logo from "./logo"
 import Hero from "./hero"
 import Badge from "./badge"
 import Donate from "./donate"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
+
   const [badgeLift, setBadgeLift] = useState(0)
   const [lastScrollY, setLastScrollY] = useState(0)
 
-  useEffect(() => {
-    window.addEventListener('scroll', e => {
-      if(window.scrollY > lastScrollY) {
-        setLastScrollY(window.scrollY)
-        if(window.scrollY <= 150) {
-          setBadgeLift(window.scrollY * -1)
-        }
-      }
-    })
-  })
+  // useEffect(() => {
+  //   window.addEventListener('scroll', e => {
+  //     if(window.scrollY > lastScrollY) {
+  //       setLastScrollY(window.scrollY)
+  //       if(window.scrollY <= 150) {
+  //         setBadgeLift(window.scrollY * -1)
+  //       }
+  //     }
+  //   })
+  // })
 
   return (
     <header
       style={{
         backgroundColor: `#f2f2f2`,
-        paddingBottom: `1.45rem`,
       }}
     >
       <div
@@ -42,6 +42,8 @@ const Header = ({ siteTitle }) => {
           </h1>
         </div>
         <div style={{display:"inline-block", width:"50%", textAlign:"right", verticalAlign:"top"}}>
+          <div className="desktop-link"><Link to="/">Home</Link></div>
+          <div className="desktop-link"><Link to="/gallery/">Gallery</Link></div>
           <Donate />
         </div>
       </div>
@@ -55,14 +57,6 @@ const Header = ({ siteTitle }) => {
       </div> */}
     </header>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header
