@@ -613,7 +613,7 @@ pre tt:after {
   display: inline-block;
 }
 .desktop-link a {
-  color: #fff;
+  color: #f1c80f;
   border-bottom: inset transparent;
   display: block;
   padding: 15px;
@@ -622,12 +622,15 @@ pre tt:after {
   text-transform: uppercase;
 }
 .desktop-link a:hover {
-  border-bottom: inset #fff;
+  border-bottom: inset #f1c80f;
 }
 .gallery-image {
   display: inline-block;
   padding:1.5%;
   width: 30%;
+}
+.gallery-image img:hover {
+  cursor: pointer;
 }
 .page-header .button:hover {
   background-color: rgb(244, 242, 242) !important;
@@ -655,6 +658,9 @@ pre tt:after {
 footer a {
   margin: 0 15px;
   padding: 5px;
+}
+[data-reach-dialog-overlay] {
+  z-index: 101;
 }
 
 /*contact form*/
@@ -692,6 +698,13 @@ footer .button {
 
 div#gdpr_text {
   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  [data-reach-dialog-content] {
+    padding: 1rem;
+    width: 90vw;
+  }
 }
 
 @media only screen and (max-width: 480px) {

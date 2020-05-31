@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const Donate = ({ inverted }) => {
-  const primary = !inverted ? "#224289" : "#fff"
-  const secondary = !inverted ? "#fff" : "#224289"
+  const primary = !inverted ? "#f1c80f" : "#f1c80f"
+  const secondary = !inverted ? "#224289" : "#224289"
   const buttonStyles = {
     backgroundColor: primary,
     borderRadius: 3,

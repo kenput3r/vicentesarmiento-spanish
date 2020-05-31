@@ -1,9 +1,24 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 import Logo from "./logo"
 import Hero from "./hero"
 import Badge from "./badge"
 import Donate from "./donate"
+import MobileHeader from "./MobileHeader"
+
+const DesktopHeader = styled.div`
+  display: table;
+  margin: 0 auto;
+  padding: 1.45rem 1.0875rem;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+`
 
 const PageHeader = () => {
 
@@ -37,16 +52,7 @@ const PageHeader = () => {
         zIndex: 100
       }}
     >
-      <div
-        style={{
-          display: `table`,
-          margin: `0 auto`,
-          padding: `1.45rem 1.0875rem`,
-          position: `relative`,
-          width: `100%`,
-          zIndex: 2
-        }}
-      >
+      <DesktopHeader>
         <div style={{display:"inline-block", width:"50%"}}>
           <h1 style={{ margin: 0, maxWidth: logoWidth }}>
             <a href="/" title="Vicente Sarmiento for Mayor"><Logo /></a>
@@ -59,7 +65,8 @@ const PageHeader = () => {
           <div className="desktop-link"><Link to="/gallery/">Gallery</Link></div>
           <Donate inverted={true} />
         </div>
-      </div>
+      </DesktopHeader>
+      <MobileHeader />
     </header>
   )
 }
