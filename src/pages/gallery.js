@@ -35,9 +35,20 @@ import image21 from "../images/gallery/vicente-sarmiento-21.jpg"
 import image22 from "../images/gallery/vicente-sarmiento-22.jpg"
 
 const Container = styled.div`
-  margin-top: 191px;
+  position: relative;
+  top: 191px;
+  &:after {
+    content: " ";
+    display: table;
+    margin-bottom: 191px;
+  }
   @media (max-width: 767px) {
-    margin-top: 75px;
+    top: 75px;
+    &:after {
+      content: " ";
+      display: table;
+      margin-bottom: 75px;
+    }
   }
 `
 
@@ -110,154 +121,154 @@ export const Images = graphql`
 query {
   img1: file(relativePath: { eq: "gallery/vicente-sarmiento-1.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img2: file(relativePath: { eq: "gallery/vicente-sarmiento-2.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img3: file(relativePath: { eq: "gallery/vicente-sarmiento-3.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img4: file(relativePath: { eq: "gallery/vicente-sarmiento-4.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img5: file(relativePath: { eq: "gallery/vicente-sarmiento-5.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img6: file(relativePath: { eq: "gallery/vicente-sarmiento-6.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img7: file(relativePath: { eq: "gallery/vicente-sarmiento-7.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img8: file(relativePath: { eq: "gallery/vicente-sarmiento-8.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img9: file(relativePath: { eq: "gallery/vicente-sarmiento-9.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img10: file(relativePath: { eq: "gallery/vicente-sarmiento-10.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img11: file(relativePath: { eq: "gallery/vicente-sarmiento-11.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img12: file(relativePath: { eq: "gallery/vicente-sarmiento-12.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img13: file(relativePath: { eq: "gallery/vicente-sarmiento-13.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img14: file(relativePath: { eq: "gallery/vicente-sarmiento-14.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img15: file(relativePath: { eq: "gallery/vicente-sarmiento-15.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img16: file(relativePath: { eq: "gallery/vicente-sarmiento-16.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img17: file(relativePath: { eq: "gallery/vicente-sarmiento-17.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img18: file(relativePath: { eq: "gallery/vicente-sarmiento-18.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img19: file(relativePath: { eq: "gallery/vicente-sarmiento-19.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img20: file(relativePath: { eq: "gallery/vicente-sarmiento-20.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img21: file(relativePath: { eq: "gallery/vicente-sarmiento-21.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
   img22: file(relativePath: { eq: "gallery/vicente-sarmiento-22.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 300) {
+      fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }

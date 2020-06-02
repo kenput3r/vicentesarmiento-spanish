@@ -1,14 +1,25 @@
 import React from "react"
+import styled from "styled-components"
 import Layout from "../components/layout"
 import Header from "../components/header"
 import SEO from "../components/seo"
 import Videos from "../components/videos"
 import Contact from "../components/contact"
+import Hero from "../components/hero"
+
+const HeroContainer = styled.div`
+  @media (max-width: 767px) {
+    margin-top: 91px;
+  }
+`
 
 const IndexPage = () => (
   <Layout>
     <Header />
     <SEO title="Home" />
+    <HeroContainer id="HeroContainer">
+      <Hero />
+    </HeroContainer>
     <div style={{backgroundColor: `#f2f2f2`, padding: `0 1.0875rem 1.45rem`}}>
       <div style={{maxWidth:960, margin:"0 auto"}}>
         <h2>About Councilmember Vicente Sarmiento</h2>

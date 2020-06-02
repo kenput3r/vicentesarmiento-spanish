@@ -617,12 +617,25 @@ pre tt:after {
   border-bottom: inset transparent;
   display: block;
   padding: 15px;
+  position: relative;
   margin-right: 10px;
   text-decoration: none;
   text-transform: uppercase;
 }
-.desktop-link a:hover {
-  border-bottom: inset #f1c80f;
+.desktop-link a:hover:after {
+  /*border-bottom: inset #f1c80f;*/
+  transform: scaleX(1);
+}
+.desktop-link a:after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  right: 15px;
+  border-bottom: 2px solid #f1c80f;
+  transition: transform 250ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left center;
 }
 .gallery-image {
   display: inline-block;
@@ -632,11 +645,10 @@ pre tt:after {
 .gallery-image img:hover {
   cursor: pointer;
 }
-.page-header .button:hover {
-  background-color: rgb(244, 242, 242) !important;
-  color: #224289;
+.button:hover {
+  background-color: transparent !important;
+  color: #f1c80f !important;
   text-decoration: underline;
-
 }
 .page-title {
   margin-bottom: 0;
@@ -680,7 +692,7 @@ h2.ctct-form-header {
 footer .paid-for-by, footer .donate, footer .social {
   display: inline-block;
   text-align: center;
-  width: 33%;
+  width: 50%;
 }
 
 footer .paid-for-by, footer .social {
@@ -690,10 +702,6 @@ footer .paid-for-by, footer .social {
 
 footer .button {
   padding: 10px !important;
-}
-
-.button:hover {
-  background-color: #2c56b2 !important;
 }
 
 div#gdpr_text {

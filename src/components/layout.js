@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -30,9 +30,6 @@ const Layout = ({ children }) => {
         <footer style={{backgroundColor:"#ffffff", padding:20}}>
           <div className="paid-for-by">
             Paid for by Sarmiento for Mayor 2020 #1425828
-          </div>
-          <div className="donate" style={{verticalAlign:"top"}}>
-            <Donate />
           </div>
           <div className="social">
             <a href="https://www.facebook.com/SarmientoForMayor/" title="Vicente Sarmiento on Facebook">

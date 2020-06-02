@@ -70,10 +70,23 @@ div {
   transition: all 0.3s linear;
   position: relative;
   transform-origin: 1px;
+
+  :first-child {
+    transform: ${({ drawerOpen }) => drawerOpen ? 'rotate(45deg)' : 'rotate(0)'};
+  }
+
+  :nth-child(2) {
+    opacity: ${({ drawerOpen }) => drawerOpen ? '0' : '1'};
+    transform: ${({ drawerOpen }) => drawerOpen ? 'translateX(20px)' : 'translateX(0)'};
+  }
+
+  :nth-child(3) {
+    transform: ${({ drawerOpen }) => drawerOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+  }
 }
 `
 
-const MobileHeader = () => {
+const MobileHeader = ({drawerOpen, setDrawerOpen}) => {
   return(
     <Container>
       <LogoContainer>
@@ -83,7 +96,7 @@ const MobileHeader = () => {
         <DonateButton href="/">DONATE</DonateButton>
       </DonateContainer>
       <BurgerContainer>
-        <Burger>
+        <Burger drawerOpen={drawerOpen} onClick={() => setDrawerOpen(!drawerOpen)}>
           <div></div>
           <div></div>
           <div></div>

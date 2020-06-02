@@ -6,10 +6,11 @@ const Donate = ({ inverted }) => {
   const secondary = !inverted ? "#224289" : "#224289"
   const buttonStyles = {
     backgroundColor: primary,
+    border: "2px solid #f1c80f",
     borderRadius: 3,
     color: secondary,
     display: "inline-block",
-    padding: 15,
+    padding: 13,
     textDecoration: "none",
     verticalAlign: "top"
   }
