@@ -35,12 +35,12 @@ import image20 from "../images/gallery/vicente-sarmiento-20.jpg"
 import image21 from "../images/gallery/vicente-sarmiento-21.jpg"
 import image22 from "../images/gallery/vicente-sarmiento-22.jpg"
 
-import video1 from "../videos/Vicente-Sarmiento-Announces-Santa-Ana-Mayoral-Campaign.mp4"
-import video2 from "../videos/California-Moratorium-on-Evictions-and-Foreclosures.mp4"
-import video3 from "../videos/SarmientoHealth-Message-English.mp4"
-import video4 from "../videos/Sarmiento-Health-Message-Spanish.mp4"
-import video5 from "../videos/Sarmiento-Water District-Health-Message-English.mp4"
-import video6 from "../videos/Sarmiento-Water-District-Health-Message-Spanish.mp4"
+const video1 = "https://drive.google.com/uc?export=download&id=1OAh7wgQC1MRyYR1NWcqVk5Ol9i-nBzWx"
+const video2 = "https://drive.google.com/uc?export=download&id=1IRddnes0F5o5DJf3sva_M60T-EPd0TnX"
+const video3 = "https://drive.google.com/uc?export=download&id=1y3GJb4miP_NAcvG72kAd_DbidYgDTapc"
+const video4 = "https://drive.google.com/uc?export=download&id=1_RgQttnXh5WhtfjgAjKAPYeaxoXoOar7"
+const video5 = "https://drive.google.com/uc?export=download&id=1GyTFQwCvCwMZ_MDTojy21I8rcKJ1Jjzx"
+const video6 = "https://drive.google.com/uc?export=download&id=12D2XcT37yipBLsQrQ5rPwYyJQrOY1UhJ"
 
 const videos = [
   {download: video1, embed: "https://www.youtube.com/embed/031kkVNVm5Y", title: "Vicente Sarmiento Announces Santa Ana Mayoral Campaign"},
