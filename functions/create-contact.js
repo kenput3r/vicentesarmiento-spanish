@@ -1,4 +1,5 @@
 require('dotenv').config()
+require("encoding")
 const fetch = require("node-fetch").default
 // save these to environmental variables
 const api_key = process.env.api_key 
