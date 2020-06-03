@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import Header from "../components/header"
 import SEO from "../components/seo"
 import Videos from "../components/videos"
-import Contact from "../components/contact"
 import Hero from "../components/hero"
 
 const HeroContainer = styled.div`
@@ -37,7 +36,6 @@ const IndexPage = () => (
       </div>
     </div>
     <Videos />
-    {/* <Contact /> */}
   </Layout>
 )
 

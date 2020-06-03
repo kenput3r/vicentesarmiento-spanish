@@ -5,17 +5,16 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
 
 import Facebook from "./facebook"
 import Instagram from "./instagram"
 import Twitter from "./twitter"
+import YouTube from "./youtube"
 import Email from "./email"
-import Donate from "./donate"
 
 const Layout = ({ children }) => {
   return (
@@ -40,6 +39,9 @@ const Layout = ({ children }) => {
             </a>
             <a href="https://twitter.com/sarmiento4mayor" title="Vicente Sarmiento on Twitter">
              <Twitter />
+            </a>
+            <a href="https://www.youtube.com/channel/UCzsCsW3YJZwkyVwTuqRe6ew" title="Vicente Sarmiento on YouTube">
+              <YouTube />
             </a>
             <a href="mailto:info@sarmientoformayor.com" title="Email Vicente Sarmiento">
               <Email />

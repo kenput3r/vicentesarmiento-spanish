@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Logo from "./logo"
-import Hero from "./hero"
 import Badge from "./badge"
 import Donate from "./donate"
 import MobileHeader from "./MobileHeader"
@@ -23,7 +22,7 @@ const DesktopHeader = styled.div`
 
 const Header = () => {
 
-  const [badgeLift, setBadgeLift] = useState(0)
+  //const [badgeLift, setBadgeLift] = useState(0)
   const [logoWidth, setLogoWidth] = useState(400)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [headerBackground, setHeaderBackground] = useState(0)
@@ -81,8 +80,7 @@ const Header = () => {
         <div style={{display:"table-cell", width:"70%", textAlign:"right", verticalAlign:"middle"}}>
           <div className="desktop-link"><Link to="/">Home</Link></div>
           <div className="desktop-link"><Link to="/contact/">Contact</Link></div>
-          <div className="desktop-link"><Link to="/">Endorsements</Link></div>
-          <div className="desktop-link"><Link to="/gallery/">Gallery</Link></div>
+          <div className="desktop-link"><Link to="/gallery/">Media</Link></div>
           <Donate inverted={true} />
         </div>
       </DesktopHeader>

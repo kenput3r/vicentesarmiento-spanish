@@ -61,7 +61,7 @@ const Table = styled.div`
 const Row = styled.div`
   display: table-row;
 `
-const Cell = styled .div`
+const Cell = styled.div`
   display: table-cell;
   padding: 0 20px;
   width: 50%;
@@ -84,6 +84,15 @@ const Data = styled.div`
     border-top: 1px solid #cccccc;
     padding-left: 0;
     padding-top: 20px;
+  }
+
+  a {
+    color: rgb(34, 66, 137);
+    text-decoration: none;
+
+    :hover {
+      text-decoration: underline;
+    }
   }
 `
 const Form = styled.form`
@@ -246,6 +255,8 @@ const postContact = async (event, email) => {
       method: 'POST',
       body: JSON.stringify({email: email})
     })
+    const contact_form = document.getElementById('ContactForm')
+    contact_form.submit()
   }catch(error) {
     console.log(error)
   }
@@ -270,8 +281,8 @@ const Contact = () => {
         <Table>
           <Row>
             <Cell>
-              <h2 style={{maxWidth: 420, margin:"0 auto"}}>Send A Message</h2>
-              <Form action="http://localhost:9000/.netlify/functions/create-contact">
+              <h2 style={{maxWidth: 420, margin:"0 auto"}}>Send a message</h2>
+              <Form id="ContactForm" data-netlify="true">
                 <Input name="fName" type="text" placeholder="* First Name" />
                 <Input name="lName" type="text" placeholder="* Last Name" />
                 <Input name="email" type="email" placeholder="* Email" onChange={event => setEmail(event.target.value)} />

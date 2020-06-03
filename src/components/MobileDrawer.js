@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -41,10 +42,9 @@ const MobileDrawer = ({drawerOpen}) => {
 
   return (
     <StyledMenu drawerOpen={drawerOpen}>
-      <a href="/">HOME</a>
-      <a href="/contact/">CONTACT</a>
-      <a href="/">ENDORSEMENTS</a>
-      <a href="/gallery">GALLERY</a>
+      <Link to="/">HOME</Link>
+      <Link to="/contact/">CONTACT</Link>
+      <Link to="/gallery">Media</Link>
     </StyledMenu>
   )
 }
