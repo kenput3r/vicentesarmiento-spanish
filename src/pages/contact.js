@@ -285,7 +285,7 @@ const Contact = () => {
           <Row>
             <Cell>
               <h2 style={{maxWidth: 420, margin:"0 auto"}}>Send a message</h2>
-              <Form id="ContactForm" data-netlify="true">
+              <Form id="ContactForm" method="POST" data-netlify="true">
                 <Input name="fName" type="text" placeholder="* First Name" />
                 <Input name="lName" type="text" placeholder="* Last Name" />
                 <Input name="email" type="email" placeholder="* Email" onChange={event => setEmail(event.target.value)} />
