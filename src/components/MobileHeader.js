@@ -93,7 +93,7 @@ const MobileHeader = ({drawerOpen, setDrawerOpen}) => {
         <MobileLogo />
       </LogoContainer>
       <DonateContainer>
-        <DonateButton href="/">DONATE</DonateButton>
+        <DonateButton href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">DONATE</DonateButton>
       </DonateContainer>
       <BurgerContainer>
         <Burger drawerOpen={drawerOpen} onClick={() => setDrawerOpen(!drawerOpen)}>

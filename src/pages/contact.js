@@ -243,7 +243,6 @@ const Hero = () => {
       }
     }
   `)
-
   return <Img fluid={data.heroImage.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
 }
 
