@@ -250,13 +250,16 @@ const Hero = () => {
 const postContact = async (event, email) => {
   try {
     event.preventDefault()
-    console.log(email)
     const response = await fetch('/.netlify/functions/create-contact', {
       method: 'POST',
       body: JSON.stringify({email: email})
     })
-    const contact_form = document.getElementById('ContactForm')
-    contact_form.submit()
+    if(!response.error) {
+      const contact_form = document.getElementById('ContactForm')
+      contact_form.submit()
+    }else{
+      console.log(response.error)
+    }
   }catch(error) {
     console.log(error)
   }

@@ -98,7 +98,7 @@ async function checkForContact(email) {
 
   } catch(e) {
     console.error(e.message)
-    throw(new Error(e.message))
+    throw(new Error({error: e.message}))
   }
 }
 
@@ -125,7 +125,6 @@ async function createContact(contact) {
     last_name: contact.lName ? contact.lName : '',
   }
 
-  // console.log(data);
   try {
 
     const response = await fetch(url, {
