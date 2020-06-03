@@ -37,7 +37,7 @@ const IndexPage = () => (
       </div>
     </div>
     <Videos />
-    <Contact />
+    {/* <Contact /> */}
   </Layout>
 )
 

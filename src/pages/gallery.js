@@ -51,6 +51,14 @@ const Container = styled.div`
     }
   }
 `
+const Wrapper = styled.div`
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cccccc;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+`
 
 const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16,image17, image18, image19, image20, image21, image22]
 const image_alts = []
@@ -96,13 +104,13 @@ const Gallery = ({ data }) => {
     <SEO title="Photos Of Vicente Sarmiento" />
     <Container className="content">
       <h1 className="page-title">Gallery</h1>
-      <div style={{textAlign: "center"}}>
+      <Wrapper>
         {images.map((image, index) => (
             <div key={`thumb-${index}`} className="gallery-image" onClick={() => open(image, image_alts[index])}>
               <Img fluid={data[`img${index+1}`].childImageSharp.fluid} alt={image_alts[index]} />
             </div>
         ))}
-      </div>
+      </Wrapper>
     </Container>
     <Dialog  isOpen={showDialog} onDismiss={close} aria-label="a picture" style={{zIndex: 101}}>
       <div>

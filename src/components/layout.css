@@ -691,8 +691,15 @@ h2.ctct-form-header {
 
 footer .paid-for-by, footer .donate, footer .social {
   display: inline-block;
-  text-align: center;
   width: 50%;
+}
+
+footer .paid-for-by {
+  text-align: left;
+}
+
+footer .social {
+  text-align: right;
 }
 
 footer .paid-for-by, footer .social {
@@ -708,10 +715,13 @@ div#gdpr_text {
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   [data-reach-dialog-content] {
     padding: 1rem;
     width: 90vw;
+  }
+  footer .paid-for-by, footer .social {
+    text-align: center;
   }
 }
 
