@@ -267,13 +267,14 @@ const postContact = async (event, email) => {
     })
     if(!response.error) {
       const contact_form = document.getElementById('ContactForm')
-      const form_data = serialize(contact_form)
-      console.log(form_data)
-      const netlify_response = await fetch(`/contact?${form_data}`, {
-        method: "POST",
-        body: form_data
-      })
-      console.log(netlify_response)
+      // const form_data = serialize(contact_form)
+      // console.log(form_data)
+      // const netlify_response = await fetch(`/contact?${form_data}`, {
+      //   method: "POST",
+      //   body: form_data
+      // })
+      // console.log(netlify_response)
+      contact_form.submit()
     }else{
       console.log(response.error)
     }
@@ -302,7 +303,8 @@ const Contact = () => {
           <Row>
             <Cell>
               <h2 style={{maxWidth: 420, margin:"0 auto"}}>Send a message</h2>
-              <Form id="ContactForm" method="POST" data-netlify="true">
+              <Form name="contact" id="ContactForm" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
                 <Input name="fName" type="text" placeholder="* First Name" />
                 <Input name="lName" type="text" placeholder="* Last Name" />
                 <Input name="email" type="email" placeholder="* Email" onChange={event => setEmail(event.target.value)} />
