@@ -246,6 +246,18 @@ const Hero = () => {
   return <Img fluid={data.heroImage.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
 }
 
+const serialize = (form) => {
+  const serialized = []
+  for(let i = 0; i < form.elements.length; i++) {
+    const field = form.elements[i]
+    if(field.name && !field.disabled && field.type !== 'submit') {
+      const serialized_field = encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value)
+      serialized.push(serialized_field)
+    }
+  }
+  return serialized.join("&")
+}
+
 const postContact = async (event, email) => {
   try {
     event.preventDefault()
@@ -255,7 +267,12 @@ const postContact = async (event, email) => {
     })
     if(!response.error) {
       const contact_form = document.getElementById('ContactForm')
-      contact_form.submit()
+      const form_data = serialize(contact_form)
+      const netlify_response = await fetch('/', {
+        method: "POST",
+        body: form_data
+      })
+      console.log(netlify_response)
     }else{
       console.log(response.error)
     }
@@ -289,7 +306,7 @@ const Contact = () => {
                 <Input name="lName" type="text" placeholder="* Last Name" />
                 <Input name="email" type="email" placeholder="* Email" onChange={event => setEmail(event.target.value)} />
                 <Input name="phone" type="tel" placeholder="Phone Number" />
-                <Select>
+                <Select name="subject">
                   <option default={true} disabled={true}>
                     I would like to...
                   </option>
@@ -309,7 +326,7 @@ const Contact = () => {
                     Be contacted by a campaign team member
                   </option>
                 </Select>
-                <TextArea name="text" placeholder="Message"></TextArea>
+                <TextArea name="message" placeholder="Message"></TextArea>
                 <Label>
                   <input type="checkbox" checked />
                   <span></span>
