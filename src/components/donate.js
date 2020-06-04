@@ -1,12 +1,16 @@
 import React from "react"
+import PropTypes from "prop-types"
 
-const Donate = () => {
+const Donate = ({ inverted }) => {
+  const primary = !inverted ? "#f1c80f" : "#f1c80f"
+  const secondary = !inverted ? "#224289" : "#224289"
   const buttonStyles = {
-    backgroundColor: "#224289",
+    backgroundColor: primary,
+    border: "2px solid #f1c80f",
     borderRadius: 3,
-    color: "#fff",
+    color: secondary,
     display: "inline-block",
-    padding: 15,
+    padding: 13,
     textDecoration: "none",
     verticalAlign: "top"
   }
@@ -15,5 +19,10 @@ const Donate = () => {
     <a className="button" style={buttonStyles} href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">DONATE</a>
   )
 }
-
+Donate.propTypes = {
+  inverted: PropTypes.bool
+}
+Donate.defaultProps = {
+  inverted: false
+}
 export default Donate

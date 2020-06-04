@@ -1,3 +1,4 @@
+const { createProxyMiddleware } = require("http-proxy-middleware")
 module.exports = {
   siteMetadata: {
     title: `Sarmiento for Mayor`,
@@ -5,6 +6,7 @@ module.exports = {
     author: `@kenput3r`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,4 +33,15 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  developMiddleware: app => {
+    app.use(
+      '/.netlify/functions',
+      createProxyMiddleware({
+        target: 'http://localhost:9000',
+        pathRewrite: {
+          '/.netlify/functions': ''
+        },
+      })
+    )
+  }
 }

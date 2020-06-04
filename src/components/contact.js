@@ -19,7 +19,7 @@ const Contact = () => {
     ContactContainer.appendChild(signup_script)
   })
   return (
-    <div id="ContactContainer" style={{margin:30}}>
+    <div id="ContactContainer" style={{backgroundColor: `#f2f2f2`, margin:"30px 0"}}>
       <div className="ctct-inline-form" data-form-id="58e2aa1b-8910-4502-9e19-1440c20c3575" style={form_styles}></div>
     </div>
   )

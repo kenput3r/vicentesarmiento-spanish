@@ -7,34 +7,21 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
 import "./layout.css"
 
 import Facebook from "./facebook"
 import Instagram from "./instagram"
 import Twitter from "./twitter"
+import YouTube from "./youtube"
 import Email from "./email"
-import Donate from "./donate"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          backgroundColor:"#f2f2f2",
+          backgroundColor:"#fff",
           margin: `0 auto`
         }}
       >
@@ -42,9 +29,6 @@ const Layout = ({ children }) => {
         <footer style={{backgroundColor:"#ffffff", padding:20}}>
           <div className="paid-for-by">
             Paid for by Sarmiento for Mayor 2020 #1425828
-          </div>
-          <div className="donate" style={{verticalAlign:"top"}}>
-            <Donate />
           </div>
           <div className="social">
             <a href="https://www.facebook.com/SarmientoForMayor/" title="Vicente Sarmiento on Facebook">
@@ -55,6 +39,9 @@ const Layout = ({ children }) => {
             </a>
             <a href="https://twitter.com/sarmiento4mayor" title="Vicente Sarmiento on Twitter">
              <Twitter />
+            </a>
+            <a href="https://www.youtube.com/channel/UCzsCsW3YJZwkyVwTuqRe6ew" title="Vicente Sarmiento on YouTube">
+              <YouTube />
             </a>
             <a href="mailto:info@sarmientoformayor.com" title="Email Vicente Sarmiento">
               <Email />

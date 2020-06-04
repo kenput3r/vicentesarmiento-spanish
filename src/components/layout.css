@@ -609,6 +609,52 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+.desktop-link {
+  display: inline-block;
+}
+.desktop-link a {
+  color: #f1c80f;
+  border-bottom: inset transparent;
+  display: block;
+  padding: 15px;
+  position: relative;
+  margin-right: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.desktop-link a:hover:after {
+  /*border-bottom: inset #f1c80f;*/
+  transform: scaleX(1);
+}
+.desktop-link a:after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  right: 15px;
+  border-bottom: 2px solid #f1c80f;
+  transition: transform 250ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+.gallery-image {
+  display: inline-block;
+  padding:1.5%;
+  width: 30%;
+}
+.gallery-image img:hover {
+  cursor: pointer;
+}
+.button:hover {
+  background-color: transparent !important;
+  color: #f1c80f !important;
+  text-decoration: underline;
+}
+.page-title {
+  margin-bottom: 0;
+  padding: 30px;
+  text-align: center;
+}
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
@@ -624,6 +670,9 @@ pre tt:after {
 footer a {
   margin: 0 15px;
   padding: 5px;
+}
+[data-reach-dialog-overlay] {
+  z-index: 101;
 }
 
 /*contact form*/
@@ -642,8 +691,15 @@ h2.ctct-form-header {
 
 footer .paid-for-by, footer .donate, footer .social {
   display: inline-block;
-  text-align: center;
-  width: 33%;
+  width: 50%;
+}
+
+footer .paid-for-by {
+  text-align: left;
+}
+
+footer .social {
+  text-align: right;
 }
 
 footer .paid-for-by, footer .social {
@@ -655,12 +711,18 @@ footer .button {
   padding: 10px !important;
 }
 
-.button:hover {
-  background-color: #2c56b2 !important;
-}
-
 div#gdpr_text {
   display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  [data-reach-dialog-content] {
+    padding: 1rem !important;
+    width: 90vw !important;
+  }
+  footer .paid-for-by, footer .social {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 480px) {
