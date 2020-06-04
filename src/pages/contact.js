@@ -268,7 +268,8 @@ const postContact = async (event, email) => {
     if(!response.error) {
       const contact_form = document.getElementById('ContactForm')
       const form_data = serialize(contact_form)
-      const netlify_response = await fetch('/', {
+      console.log(form_data)
+      const netlify_response = await fetch(`/contact?${form_data}`, {
         method: "POST",
         body: form_data
       })
