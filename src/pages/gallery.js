@@ -77,6 +77,12 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
 `
+const H2 = styled.h2`
+  padding-top: 0;
+  padding-bottom: 7px;
+  border-bottom: 5px solid rgb(34, 66, 137);
+  margin: 0 15px 15px;
+`
 
 const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16,image17, image18, image19, image20, image21, image22]
 const image_alts = []
@@ -133,11 +139,20 @@ const Gallery = ({ data }) => {
     <Container className="content">
       <h1 className="page-title">Media</h1>
       <Wrapper>
+        <div style={{textAlign: "left", width: "100%"}}>
+          <H2>Videos</H2>
+        </div>
         {videos.map((video, index) => (
-          <a href="#" key={`thumb-${index}`} className="gallery-image" onClick={() => openVideo(video.embed, video.download, video.title)}>
-              <Img fluid={data[`video${index+1}`].childImageSharp.fluid} alt={image_alts[index]} />
-          </a>
+          <div className="gallery-image">
+            <a href="#" key={`thumb-${index}`} onClick={() => openVideo(video.embed, video.download, video.title)}>
+                <Img fluid={data[`video${index+1}`].childImageSharp.fluid} alt={image_alts[index]} />
+            </a>
+          <p style={{textAlign: "left"}}>{video.title}</p>
+          </div>
         ))}
+        <div style={{textAlign: "left", marginTop: 20, width: "100%"}}>
+          <H2>Photos</H2>
+        </div>
         {images.map((image, index) => (
             <a href="#" key={`thumb-${index}`} className="gallery-image" onClick={() => open(image, image_alts[index])}>
               <Img fluid={data[`img${index+1}`].childImageSharp.fluid} alt={image_alts[index]} />

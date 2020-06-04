@@ -246,45 +246,43 @@ const Hero = () => {
   return <Img fluid={data.heroImage.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
 }
 
-const serialize = (form) => {
-  const serialized = []
-  for(let i = 0; i < form.elements.length; i++) {
-    const field = form.elements[i]
-    if(field.name && !field.disabled && field.type !== 'submit') {
-      const serialized_field = encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value)
-      serialized.push(serialized_field)
+const postContact = async (event, email, fName, lName, phone, sendNewsletter) => {
+  event.preventDefault()
+  const contact_form = document.getElementById('ContactForm')
+  let form_errors = false
+  for(let i = 0; i < contact_form.elements.length; i++) {
+    const element = contact_form.elements[i]
+    if(element.required && !element.value) {
+      form_errors = true
     }
   }
-  return serialized.join("&")
-}
-
-const postContact = async (event, email) => {
-  try {
-    event.preventDefault()
-    const response = await fetch('/.netlify/functions/create-contact', {
-      method: 'POST',
-      body: JSON.stringify({email: email})
-    })
-    if(!response.error) {
-      const contact_form = document.getElementById('ContactForm')
-      // const form_data = serialize(contact_form)
-      // console.log(form_data)
-      // const netlify_response = await fetch(`/contact?${form_data}`, {
-      //   method: "POST",
-      //   body: form_data
-      // })
-      // console.log(netlify_response)
-      contact_form.submit()
-    }else{
-      console.log(response.error)
+  if(!form_errors) {
+    if(sendNewsletter) {
+      const body = {email: email, fName: fName, lName: lName, phone: phone}
+      try {
+        const response = await fetch('/.netlify/functions/create-contact', {
+          method: 'POST',
+          body: JSON.stringify(body)
+        })
+        if(!response.error) {
+          console.log('no errors')
+        }else{
+          console.log(response.error)
+        }
+      }catch(error) {
+        console.log(error)
+      }
     }
-  }catch(error) {
-    console.log(error)
+    contact_form.submit()
   }
 }
 
 const Contact = () => {
   const [email, setEmail] = useState('')
+  const [fName, setFname] = useState('')
+  const [lName, setLname] = useState('')
+  const [phone, setPhone] = useState('')
+  const [sendNewsletter, setSendNewsletter] = useState(true)
   return (
     <Layout>
       <PageHeader />
@@ -305,10 +303,10 @@ const Contact = () => {
               <h2 style={{maxWidth: 420, margin:"0 auto"}}>Send a message</h2>
               <Form name="contact" id="ContactForm" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
-                <Input name="fName" type="text" placeholder="* First Name" />
-                <Input name="lName" type="text" placeholder="* Last Name" />
-                <Input name="email" type="email" placeholder="* Email" onChange={event => setEmail(event.target.value)} />
-                <Input name="phone" type="tel" placeholder="Phone Number" />
+                <Input name="fName" required type="text" placeholder="* First Name" onChange={event => setFname(event.target.value)} />
+                <Input name="lName" required type="text" placeholder="* Last Name" onChange={event => setLname(event.target.value)} />
+                <Input name="email" required type="email" placeholder="* Email" onChange={event => setEmail(event.target.value)} />
+                <Input name="phone" type="tel" placeholder="Phone Number" onChange={event => setPhone(event.target.value)} />
                 <Select name="subject">
                   <option default={true} disabled={true}>
                     I would like to...
@@ -331,11 +329,11 @@ const Contact = () => {
                 </Select>
                 <TextArea name="message" placeholder="Message"></TextArea>
                 <Label>
-                  <input type="checkbox" checked />
+                  <input type="checkbox" defaultChecked={sendNewsletter} onChange={() => setSendNewsletter(!sendNewsletter)} />
                   <span></span>
                   <small>sign me up to receive campaign update emails</small>
                 </Label>
-                <Input type="submit" value="SUBMIT" onClick={event => postContact(event, email)} />
+                <Input type="submit" value="SUBMIT" onClick={event => postContact(event, email, fName, lName, phone, sendNewsletter)} />
               </Form>
             </Cell>
             <Cell className="valign-center">
