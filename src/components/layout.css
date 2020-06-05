@@ -720,6 +720,10 @@ div#gdpr_text {
     padding: 1rem !important;
     width: 90vw !important;
   }
+  .gallery-image {
+    width: 50%;
+    max-width: 100%;
+  }
   footer .paid-for-by, footer .social {
     text-align: center;
   }

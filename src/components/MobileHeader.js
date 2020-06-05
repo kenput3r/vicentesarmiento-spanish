@@ -5,7 +5,12 @@ import MobileLogo from "./MobileLogo"
 
 const Container = styled.div`
   display: table;
+  position: relative;
   width: 100%;
+  z-index: 10;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(241,200,15,0.14), 0 3px 1px -2px rgba(241,200,15,0.12), 0 1px 5px 0 rgba(241,200,15,0.2);
+  box-shadow: 0 2px 2px 0 rgba(241,200,15,0.14), 0 3px 1px -2px rgba(241,200,15,0.12), 0 1px 5px 0 rgba(241,200,15,0.2);
+}
   div {
     position: relative;
     max-height: 75px;

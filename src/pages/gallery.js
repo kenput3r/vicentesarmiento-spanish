@@ -114,13 +114,13 @@ const Gallery = ({ data }) => {
   const [showDialog, setShowDialog] = useState(false)
   const [showVideo, setShowVideo] = useState(false)
   const [activeImage, setActiveImage] = useState(false)
-  const [activeImageAlt, setActiveImageAlt] = useState("Vicente Sarmiento")
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
   const [activeVideo, setActiveVideo] = useState(false)
   const [embedUrl, setEmbedUrl] = useState(false)
   const [activeVideoTitle, setActiveVideoTitle] = useState(false)
-  const open = (src, alt) => {
+  const open = (src, index) => {
+    setActiveImageIndex(index)
     setActiveImage(src)
-    setActiveImageAlt(alt)
     setShowDialog(true)
     return false
   }
@@ -145,7 +145,7 @@ const Gallery = ({ data }) => {
           <H2>Videos</H2>
         </div>
         {videos.map((video, index) => (
-          <div className="gallery-image">
+          <div className="gallery-image video">
             <a role="button" key={`thumb-${index}`} onClick={() => openVideo(video.embed, video.download, video.title)}>
                 <Img fluid={data[`video${index+1}`].childImageSharp.fluid} alt={image_alts[index]} />
             </a>
@@ -156,7 +156,7 @@ const Gallery = ({ data }) => {
           <H2>Photos</H2>
         </div>
         {images.map((image, index) => (
-            <a role="button" key={`thumb-${index}`} className="gallery-image" onClick={() => open(image, image_alts[index])}>
+            <a role="button" key={`thumb-${index}`} className="gallery-image" onClick={() => open(image, index)}>
               <Img fluid={data[`img${index+1}`].childImageSharp.fluid} alt={image_alts[index]} />
             </a>
         ))}
@@ -164,7 +164,7 @@ const Gallery = ({ data }) => {
     </Container>
     <Dialog  isOpen={showDialog} onDismiss={close} aria-label="a picture" style={{zIndex: 101}}>
       <div>
-        {activeImage ? <img src={activeImage} alt={activeImageAlt} /> : ''}
+        {activeImage ? <Img fluid={data[`img${activeImageIndex+1}b`].childImageSharp.fluid} alt={image_alts[activeImageIndex]} /> : ''}
         <p>
           <span><a role="button" onClick={close} style={{color: "#224289", cursor: "pointer"}}>&times; close</a></span> 
           <span><a href={activeImage} download style={{textDecoration: "none", color: "#224289", float: "right"}}>&darr; download</a></span>
@@ -194,9 +194,23 @@ query {
       }
     }
   }
+  img1b: file(relativePath: { eq: "gallery/vicente-sarmiento-1.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   img2: file(relativePath: { eq: "gallery/vicente-sarmiento-2.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  img2b: file(relativePath: { eq: "gallery/vicente-sarmiento-2.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -208,9 +222,23 @@ query {
       }
     }
   }
+  img3b: file(relativePath: { eq: "gallery/vicente-sarmiento-3.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   img4: file(relativePath: { eq: "gallery/vicente-sarmiento-4.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  img4b: file(relativePath: { eq: "gallery/vicente-sarmiento-4.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -222,9 +250,23 @@ query {
       }
     }
   }
+  img5b: file(relativePath: { eq: "gallery/vicente-sarmiento-5.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   img6: file(relativePath: { eq: "gallery/vicente-sarmiento-6.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  img6b: file(relativePath: { eq: "gallery/vicente-sarmiento-6.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -236,9 +278,23 @@ query {
       }
     }
   }
+  img7b: file(relativePath: { eq: "gallery/vicente-sarmiento-7.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   img8: file(relativePath: { eq: "gallery/vicente-sarmiento-8.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  img8b: file(relativePath: { eq: "gallery/vicente-sarmiento-8.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -250,9 +306,23 @@ query {
       }
     }
   }
+  img9b: file(relativePath: { eq: "gallery/vicente-sarmiento-9.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   img10: file(relativePath: { eq: "gallery/vicente-sarmiento-10.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  img10b: file(relativePath: { eq: "gallery/vicente-sarmiento-10.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -264,9 +334,23 @@ query {
       }
     }
   }
+  img11b: file(relativePath: { eq: "gallery/vicente-sarmiento-11.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   img12: file(relativePath: { eq: "gallery/vicente-sarmiento-12.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  img12b: file(relativePath: { eq: "gallery/vicente-sarmiento-12.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -278,9 +362,23 @@ query {
       }
     }
   }
+  img13b: file(relativePath: { eq: "gallery/vicente-sarmiento-13.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   img14: file(relativePath: { eq: "gallery/vicente-sarmiento-14.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  img14b: file(relativePath: { eq: "gallery/vicente-sarmiento-14.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -292,9 +390,23 @@ query {
       }
     }
   }
+  img15b: file(relativePath: { eq: "gallery/vicente-sarmiento-15.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   img16: file(relativePath: { eq: "gallery/vicente-sarmiento-16.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  img16b: file(relativePath: { eq: "gallery/vicente-sarmiento-16.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -306,9 +418,23 @@ query {
       }
     }
   }
+  img17b: file(relativePath: { eq: "gallery/vicente-sarmiento-17.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   img18: file(relativePath: { eq: "gallery/vicente-sarmiento-18.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  img18b: file(relativePath: { eq: "gallery/vicente-sarmiento-18.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -320,9 +446,23 @@ query {
       }
     }
   }
+  img19b: file(relativePath: { eq: "gallery/vicente-sarmiento-19.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   img20: file(relativePath: { eq: "gallery/vicente-sarmiento-20.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  img20b: file(relativePath: { eq: "gallery/vicente-sarmiento-20.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
@@ -334,9 +474,23 @@ query {
       }
     }
   }
+  img21b: file(relativePath: { eq: "gallery/vicente-sarmiento-21.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
   img22: file(relativePath: { eq: "gallery/vicente-sarmiento-22.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  img22b: file(relativePath: { eq: "gallery/vicente-sarmiento-22.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
       }
     }
