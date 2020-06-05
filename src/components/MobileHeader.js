@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import MobileLogo from "./MobileLogo"
 
-const Container = styled.div`
+const Container = styled.nav`
   display: table;
   position: relative;
   width: 100%;
@@ -93,7 +93,7 @@ div {
 
 const MobileHeader = ({drawerOpen, setDrawerOpen}) => {
   return(
-    <Container>
+    <Container role="navigation">
       <LogoContainer>
         <MobileLogo />
       </LogoContainer>
