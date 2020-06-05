@@ -122,6 +122,7 @@ const Gallery = ({ data }) => {
     setActiveImage(src)
     setActiveImageAlt(alt)
     setShowDialog(true)
+    return false
   }
   const close = () => {
     setShowDialog(false)
@@ -131,6 +132,7 @@ const Gallery = ({ data }) => {
     setActiveVideo(downloadUrl)
     setActiveVideoTitle(title)
     setShowVideo(true)
+    return false
   }
   return (
   <Layout>
@@ -144,7 +146,7 @@ const Gallery = ({ data }) => {
         </div>
         {videos.map((video, index) => (
           <div className="gallery-image">
-            <a href="#" key={`thumb-${index}`} onClick={() => openVideo(video.embed, video.download, video.title)}>
+            <a role="button" key={`thumb-${index}`} onClick={() => openVideo(video.embed, video.download, video.title)}>
                 <Img fluid={data[`video${index+1}`].childImageSharp.fluid} alt={image_alts[index]} />
             </a>
           <p style={{textAlign: "left"}}>{video.title}</p>
@@ -154,7 +156,7 @@ const Gallery = ({ data }) => {
           <H2>Photos</H2>
         </div>
         {images.map((image, index) => (
-            <a href="#" key={`thumb-${index}`} className="gallery-image" onClick={() => open(image, image_alts[index])}>
+            <a role="button" key={`thumb-${index}`} className="gallery-image" onClick={() => open(image, image_alts[index])}>
               <Img fluid={data[`img${index+1}`].childImageSharp.fluid} alt={image_alts[index]} />
             </a>
         ))}
@@ -164,7 +166,7 @@ const Gallery = ({ data }) => {
       <div>
         {activeImage ? <img src={activeImage} alt={activeImageAlt} /> : ''}
         <p>
-          <span><a href="#" onClick={close} style={{color: "#224289", cursor: "pointer"}}>&times; close</a></span> 
+          <span><a role="button" onClick={close} style={{color: "#224289", cursor: "pointer"}}>&times; close</a></span> 
           <span><a href={activeImage} download style={{textDecoration: "none", color: "#224289", float: "right"}}>&darr; download</a></span>
         </p>
       </div>
@@ -174,7 +176,7 @@ const Gallery = ({ data }) => {
         {activeVideo ? <Video src={embedUrl} title={activeVideoTitle} /> : ''}
         <p>{activeVideoTitle}</p>
         <p>
-          <span><a href="#" onClick={() => setShowVideo(false)} style={{color: "#224289", cursor: "pointer"}}>&times; close</a></span> 
+          <span><a role="button" onClick={() => setShowVideo(false)} style={{color: "#224289", cursor: "pointer"}}>&times; close</a></span> 
           <span><a href={activeVideo} download style={{textDecoration: "none", color: "#224289", float: "right"}}>&darr; download</a></span>
         </p>
       </div>
