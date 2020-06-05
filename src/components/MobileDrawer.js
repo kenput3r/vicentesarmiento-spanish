@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const StyledMenu = styled.nav`
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   background: #224289;
@@ -17,6 +17,7 @@ const StyledMenu = styled.nav`
   transform: ${({ drawerOpen }) => drawerOpen ? 'translateX(0)' : 'translateX(-100%)'};
   
   @media (max-width: 767px) {
+    display: flex;
     width: 100%;
   }
 
