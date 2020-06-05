@@ -173,8 +173,8 @@ const Gallery = ({ data }) => {
       <div>
         {activeImage ? <Img fluid={data[`img${activeImageIndex+1}b`].childImageSharp.fluid} alt={image_alts[activeImageIndex]} /> : ''}
         <p>
-          <span><a role="button" tabIndex="0" onClick={close} onKeyDown={(event) => handleKeyDown(event, close)} style={{color: "#224289", cursor: "pointer"}}>&times; close</a></span> 
-          <span><a href={activeImage} download style={{textDecoration: "none", color: "#224289", float: "right"}}>&darr; download</a></span>
+          <span><a role="button" tabIndex="0" onClick={close} onKeyDown={(event) => handleKeyDown(event, close)} style={{color: "#224289", cursor: "pointer", marginTop: 5, padding: 5, display: "inline-block"}}>&times; close</a></span> 
+          <span><a href={activeImage} download style={{textDecoration: "none", color: "#224289", float: "right", marginTop: 5, padding: 5, display: "inline-block"}}>&darr; download</a></span>
         </p>
       </div>
     </Dialog>
@@ -183,8 +183,8 @@ const Gallery = ({ data }) => {
         {activeVideo ? <Video src={embedUrl} title={activeVideoTitle} /> : ''}
         <p>{activeVideoTitle}</p>
         <p>
-          <span><a role="button" tabIndex="0" onClick={() => setShowVideo(false)} onKeyDown={(event) => handleKeyDown(event, () =>setShowVideo(false))} style={{color: "#224289", cursor: "pointer"}}>&times; close</a></span> 
-          <span><a href={activeVideo} download style={{textDecoration: "none", color: "#224289", float: "right"}}>&darr; download</a></span>
+          <span><a role="button" tabIndex="0" onClick={() => setShowVideo(false)} onKeyDown={(event) => handleKeyDown(event, () =>setShowVideo(false))} style={{color: "#224289", cursor: "pointer", marginTop: 5, padding: 5, display: "inline-block"}}>&times; close</a></span> 
+          <span><a href={activeVideo} download style={{textDecoration: "none", color: "#224289", float: "right", marginTop: 5, padding: 5, display: "inline-block"}}>&darr; download</a></span>
         </p>
       </div>
     </Dialog>
