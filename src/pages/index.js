@@ -15,7 +15,7 @@ const HeroContainer = styled.div`
 const IndexPage = () => (
   <Layout>
     <Header />
-    <SEO title="Home" />
+    <SEO title="Vicente Sarmiento" />
     <HeroContainer id="HeroContainer">
       <Hero />
     </HeroContainer>

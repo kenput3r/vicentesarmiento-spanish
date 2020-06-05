@@ -639,8 +639,12 @@ pre tt:after {
 }
 .gallery-image {
   display: inline-block;
-  padding:1.5%;
   width: 30%;
+  vertical-align: text-top;
+}
+.gallery-image a {
+  display: block;
+  padding:1.5%;
 }
 .gallery-image img:hover {
   cursor: pointer;
@@ -719,6 +723,10 @@ div#gdpr_text {
   [data-reach-dialog-content] {
     padding: 1rem !important;
     width: 90vw !important;
+  }
+  .gallery-image {
+    width: 50%;
+    max-width: 100%;
   }
   footer .paid-for-by, footer .social {
     text-align: center;

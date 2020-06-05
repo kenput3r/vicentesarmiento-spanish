@@ -6,7 +6,7 @@ import Donate from "./donate"
 import MobileHeader from "./MobileHeader"
 import MobileDrawer from "./MobileDrawer"
 
-const DesktopHeader = styled.div`
+const DesktopHeader = styled.nav`
   display: table;
   margin: 0 auto;
   padding: 1rem 1.0875rem;
@@ -51,7 +51,7 @@ const PageHeader = () => {
         zIndex: 100
       }}
     >
-      <DesktopHeader>
+      <DesktopHeader role="navigation">
         <div style={{display:"table-cell", width:"30%"}}>
           <h1 style={{ margin: 0, maxWidth: logoWidth }}>
             <a href="/" title="Vicente Sarmiento for Mayor"><Logo /></a>

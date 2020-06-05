@@ -3,21 +3,21 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const StyledMenu = styled.nav`
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   background: #224289;
-  border-top: 2px solid #f1c80f;
   height: 90vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
-  top: 92px;
+  top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
   transform: ${({ drawerOpen }) => drawerOpen ? 'translateX(0)' : 'translateX(-100%)'};
   
   @media (max-width: 767px) {
+    display: flex;
     width: 100%;
   }
 
