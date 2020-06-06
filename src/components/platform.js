@@ -20,6 +20,10 @@ const InlineBlock = styled.div`
   width: 25%;
   padding: 10px;
   vertical-align: text-top;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `
 const Icon = styled.div`
   margin: 0 auto 5px;
@@ -153,28 +157,56 @@ const Platform = () => {
         }
       }
     }
+    affordableHousing_op0c: file(relativePath: { eq: "affordable-housing_op0c.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    educationFirst_op0c: file(relativePath: { eq: "education-first_op0c.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    reducingHomelessness_op0c: file(relativePath: { eq: "reducing-homelessness_op0c.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    saferNeighborhoods_op0c: file(relativePath: { eq: "safer-neighborhoods_op0c.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }`)
   return (
     <Container>
       <Wrapper>
         <h2>Vicente's Priorities</h2>
         <InlineBlock>
-          <Icon><Img fluid={Images.affordableHousing_op0b.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.affordableHousing_op0c.childImageSharp.fluid} /></Icon>
           <Title>Affordable Houseing</Title>
           <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/" title="Read more about Vicente's plans for affordable housing in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={Images.educationFirst_op0b.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.educationFirst_op0c.childImageSharp.fluid} /></Icon>
           <Title>Education <br />First</Title>
           <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/" title="Read more about Vicente's plans for education in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={Images.reducingHomelessness_op0b.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.reducingHomelessness_op0c.childImageSharp.fluid} /></Icon>
           <Title>Reducing Homelessness</Title>
           <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/" title="Read more about Vicente's plans for reducing homelessness in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={Images.saferNeighborhoods_op0b.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.saferNeighborhoods_op0c.childImageSharp.fluid} /></Icon>
           <Title>Safer Neighborhoods</Title>
           <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
