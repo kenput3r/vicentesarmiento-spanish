@@ -8,6 +8,11 @@ const Container = styled.div`
   background-color: #f2f2f2;
   box-sizing: border-box;
   padding-top: 30px;
+
+  @media (min-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 `
 const Wrapper = styled.div`
   max-width: 1140px;
