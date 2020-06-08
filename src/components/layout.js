@@ -31,19 +31,19 @@ const Layout = ({ children }) => {
             Paid for by Sarmiento for Mayor 2020 #1425828
           </div>
           <div className="social">
-            <a href="https://www.facebook.com/SarmientoForMayor/" title="Vicente Sarmiento on Facebook">
+            <a href="https://www.facebook.com/SarmientoForMayor/" title="Vicente Sarmiento on Facebook" target="_blank">
               <Facebook />
             </a>
-            <a href="https://www.instagram.com/sarmientoformayor/" title="Viente Sarmiento on Instagram">
+            <a href="https://www.instagram.com/sarmientoformayor/" title="Viente Sarmiento on Instagram" target="_blank">
               <Instagram />
             </a>
-            <a href="https://twitter.com/sarmiento4mayor" title="Vicente Sarmiento on Twitter">
+            <a href="https://twitter.com/sarmiento4mayor" title="Vicente Sarmiento on Twitter" target="_blank">
              <Twitter />
             </a>
-            <a href="https://www.youtube.com/channel/UCzsCsW3YJZwkyVwTuqRe6ew" title="Vicente Sarmiento on YouTube">
+            <a href="https://www.youtube.com/channel/UCzsCsW3YJZwkyVwTuqRe6ew" title="Vicente Sarmiento on YouTube" target="_blank">
               <YouTube />
             </a>
-            <a href="mailto:info@sarmientoformayor.com" title="Email Vicente Sarmiento">
+            <a href="mailto:info@sarmientoformayor.com" title="Email Vicente Sarmiento" target="_blank">
               <Email />
             </a>
           </div>

@@ -59,7 +59,7 @@ const PageHeader = () => {
         </div>
         <div style={{display:"table-cell", width:"70%", textAlign:"right", verticalAlign:"middle"}}>
           <div className="desktop-link"><Link to="/">Home</Link></div>
-          <div className="desktop-link"><Link to="/about/">About</Link></div>
+          <div className="desktop-link"><Link to="/about/">Meet Vicente</Link></div>
           <div className="desktop-link"><Link to="/contact/">Contact</Link></div>
           <div className="desktop-link"><Link to="/gallery/">Media</Link></div>
           <Donate inverted={true} />

@@ -43,7 +43,7 @@ const MobileDrawer = ({drawerOpen}) => {
   return (
     <StyledMenu drawerOpen={drawerOpen}>
       <Link to="/">HOME</Link>
-      <Link to="/about/">About</Link>
+      <Link to="/about/">Meet Vicente</Link>
       <Link to="/contact/">CONTACT</Link>
       <Link to="/gallery">Media</Link>
     </StyledMenu>

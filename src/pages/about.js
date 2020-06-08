@@ -85,7 +85,7 @@ const Page = () => {
         <HeroContainer>
           <HeadingContainer>
             <H1 className="page-title">
-              About Vicente Sarmiento <br />
+              Meet Vicente Sarmiento <br />
               <small>Father. Husband. Councilmember.</small>
             </H1>
           </HeadingContainer>
