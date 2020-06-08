@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -26,7 +27,7 @@ const Hero = () => {
     }
   `)
 
-  return <Img fluid={data.heroImage.childImageSharp.fluid} alt="Vicente Samrmiento waving hello" />
+  return <BackgroundImage className="HeroBackground" fluid={data.heroImage.childImageSharp.fluid} alt="Vicente Samrmiento waving hello" />
 }
 
 export default Hero

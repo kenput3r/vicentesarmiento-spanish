@@ -196,24 +196,24 @@ const Platform = () => {
       <Wrapper>
         <h2>Vicente's Priorities</h2>
         <InlineBlock>
-          <Icon><Img fluid={Images.affordableHousing_op0c.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.affordableHousing_op0.childImageSharp.fluid} /></Icon>
           <Title>Affordable Houseing</Title>
-          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/" title="Read more about Vicente's plans for affordable housing in Santa Ana">Read More</Link></Excerpt>
+          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/affordable-housing-in-santa-ana" title="Read more about Vicente's plans for affordable housing in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={Images.educationFirst_op0c.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.educationFirst_op0.childImageSharp.fluid} /></Icon>
           <Title>Education <br />First</Title>
-          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/" title="Read more about Vicente's plans for education in Santa Ana">Read More</Link></Excerpt>
+          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/education-in-santa-ana" title="Read more about Vicente's plans for education in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={Images.reducingHomelessness_op0c.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.reducingHomelessness_op0.childImageSharp.fluid} /></Icon>
           <Title>Reducing Homelessness</Title>
-          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/" title="Read more about Vicente's plans for reducing homelessness in Santa Ana">Read More</Link></Excerpt>
+          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/homelessness-in-santa-ana" title="Read more about Vicente's plans for reducing homelessness in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={Images.saferNeighborhoods_op0c.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.saferNeighborhoods_op0.childImageSharp.fluid} /></Icon>
           <Title>Safer Neighborhoods</Title>
-          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">Read More</Link></Excerpt>
+          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/safer-neighborhoods-in-santa-ana" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
       </Wrapper>
     </Container>

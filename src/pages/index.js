@@ -12,6 +12,15 @@ const HeroContainer = styled.div`
   @media (max-width: 767px) {
     margin-top: 91px;
   }
+
+  .HeroBackground {
+    background-attachment: fixed;
+    height: 100vh;
+
+    :before, :after {
+      background-attachment: fixed;
+    }
+  }
 `
 
 const IndexPage = () => (

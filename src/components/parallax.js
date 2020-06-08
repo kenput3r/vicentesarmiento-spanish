@@ -8,7 +8,7 @@ const Container = styled.div`
   background-attachment: fixed;
   background-size: cover;
   background-position: right;
-  height: 900px;
+  height: 100vh;
 
   @media (max-width: 767px) {
     display: table-cell;
