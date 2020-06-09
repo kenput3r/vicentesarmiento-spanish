@@ -9,9 +9,9 @@ const Container = styled.div`
   background-size: cover;
   background-position: right;
   height: 100vh;
-  max-height: 1080px;
 
   @media (max-width: 767px) {
+    background-attachment: scroll;
     display: table-cell;
     vertical-align: bottom;
   }

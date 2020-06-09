@@ -16,9 +16,15 @@ const HeroContainer = styled.div`
   .HeroBackground {
     background-attachment: fixed;
     height: 100vh;
+    @media (max-width: 767px) {
+      background-attachment: scroll;
+    }
 
     :before, :after {
       background-attachment: fixed;
+      @media (max-width: 767px) {
+        background-attachment: scroll;
+      }
     }
   }
 `
