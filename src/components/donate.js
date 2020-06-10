@@ -16,7 +16,7 @@ const Donate = ({ inverted }) => {
   }
 
   return (
-    <a className="button" style={buttonStyles} href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">DONATE</a>
+    <a className="button" style={buttonStyles} href="https://www.efundraisingconnections.com/c/VicenteSarmiento/" target="_blank">DONATE</a>
   )
 }
 Donate.propTypes = {

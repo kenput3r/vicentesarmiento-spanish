@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 const InlineBlock = styled.div`
   box-sizing: border-box;
   display: inline-block;
-  width: 25%;
+  width: 33%;
   padding: 10px;
   vertical-align: text-top;
 
@@ -190,29 +190,55 @@ const Platform = () => {
         }
       }
     }
+    investmentInYouth_op0c: file(relativePath: { eq: "investment-in-youth_op0c.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    publicHealth_op0c: file(relativePath: { eq: "public-health_op0c.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    affordableHousing_op0d: file(relativePath: { eq: "affordable-housing_op0d.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }`)
   return (
     <Container>
       <Wrapper>
         <h2>Vicente's Priorities</h2>
         <InlineBlock>
-          <Icon><Img fluid={Images.affordableHousing_op0.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.affordableHousing_op0d.childImageSharp.fluid} /></Icon>
           <Title>Affordable Houseing</Title>
           <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/affordable-housing-in-santa-ana" title="Read more about Vicente's plans for affordable housing in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={Images.educationFirst_op0.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.investmentInYouth_op0c.childImageSharp.fluid} /></Icon>
           <Title>Education <br />First</Title>
           <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/education-in-santa-ana" title="Read more about Vicente's plans for education in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={Images.reducingHomelessness_op0.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.reducingHomelessness_op0c.childImageSharp.fluid} /></Icon>
           <Title>Reducing Homelessness</Title>
           <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/homelessness-in-santa-ana" title="Read more about Vicente's plans for reducing homelessness in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={Images.saferNeighborhoods_op0.childImageSharp.fluid} /></Icon>
+          <Icon><Img fluid={Images.saferNeighborhoods_op0c.childImageSharp.fluid} /></Icon>
           <Title>Safer Neighborhoods</Title>
+          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/safer-neighborhoods-in-santa-ana" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">Read More</Link></Excerpt>
+        </InlineBlock>
+        <InlineBlock>
+          <Icon><Img fluid={Images.publicHealth_op0c.childImageSharp.fluid} /></Icon>
+          <Title>Public Health</Title>
           <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/safer-neighborhoods-in-santa-ana" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
       </Wrapper>
