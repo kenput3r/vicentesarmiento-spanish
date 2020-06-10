@@ -224,7 +224,7 @@ const Platform = () => {
         <InlineBlock>
           <Icon><Img fluid={Images.investmentInYouth_op0c.childImageSharp.fluid} /></Icon>
           <Title>Education <br />First</Title>
-          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/education-in-santa-ana" title="Read more about Vicente's plans for education in Santa Ana">Read More</Link></Excerpt>
+          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/investing-in-santa-ana-youth" title="Read more about Vicente's plans for education in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
           <Icon><Img fluid={Images.reducingHomelessness_op0c.childImageSharp.fluid} /></Icon>
@@ -239,7 +239,7 @@ const Platform = () => {
         <InlineBlock>
           <Icon><Img fluid={Images.publicHealth_op0c.childImageSharp.fluid} /></Icon>
           <Title>Public Health</Title>
-          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/safer-neighborhoods-in-santa-ana" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">Read More</Link></Excerpt>
+          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/public-health/" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
       </Wrapper>
     </Container>

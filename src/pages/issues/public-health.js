@@ -61,14 +61,14 @@ const Content = styled.div`
 const Page = () => {
   const Images = useStaticQuery(graphql`
     query {
-      heroImage: file(relativePath: { eq: "education-in-santa-ana.jpg" }) {
+      heroImage: file(relativePath: { eq: "public-health.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      educationFirst_op0: file(relativePath: { eq: "education-first_op0c.png" }) {
+      educationFirst_op0: file(relativePath: { eq: "public-health_op0c.png" }) {
         childImageSharp {
           fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
@@ -80,13 +80,13 @@ const Page = () => {
   return(
     <Layout>
       <PageHeader />
-      <SEO title="Education In Santa Ana" />
+      <SEO title="Public Health In Santa Ana" />
       <Container>
         <HeroContainer>
           <HeadingContainer>
             <H1 className="page-title">
-              Education In Santa Ana <br />
-              <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+              Public Health In Santa Ana <br />
+              <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
             </H1>
           </HeadingContainer>
           <Img fluid={Images.heroImage.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
