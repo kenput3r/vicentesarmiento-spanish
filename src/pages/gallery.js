@@ -72,10 +72,10 @@ const Container = styled.div`
 const Wrapper = styled.div`
   text-align: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid #cccccc;
   max-width: 1040px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 `
 const H2 = styled.h2`
   padding-top: 0;

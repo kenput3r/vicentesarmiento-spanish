@@ -18,7 +18,7 @@ const Facebook = () => {
     query {
       facebook: file(relativePath: { eq: "facebook.png" }) {
         childImageSharp {
-          fixed(height: 20) {
+          fixed(height: 29) {
             ...GatsbyImageSharpFixed
           }
         }

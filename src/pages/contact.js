@@ -54,8 +54,7 @@ const H1 = styled.h1`
 `
 const Table = styled.div`
   display: table;
-  border-bottom: 1px solid #cccccc;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   max-width: 1040px;
 `
 const Row = styled.div`

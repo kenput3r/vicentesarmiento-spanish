@@ -56,6 +56,7 @@ const Content = styled.div`
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
   padding: 10px;
 `
 const Page = () => {

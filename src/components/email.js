@@ -18,7 +18,7 @@ const Email = () => {
     query {
       email: file(relativePath: { eq: "email.png" }) {
         childImageSharp {
-          fixed(height: 20) {
+          fixed(height: 29) {
             ...GatsbyImageSharpFixed
           }
         }

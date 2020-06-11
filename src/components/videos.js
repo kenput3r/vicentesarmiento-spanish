@@ -1,7 +1,7 @@
 import React from "react"
 
 const Videos = () => (
-  <div style={{backgroundColor:"#ffffff", padding:"30px 0"}}>
+  <div style={{backgroundColor:"#ffffff", padding:"30px 0", marginBottom: 30}}>
     <div style={{maxWidth:1140, margin:"0 auto"}}>
       <h2>From Vicente</h2>
       <div className="videoWrapper">

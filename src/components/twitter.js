@@ -18,7 +18,7 @@ const Twitter = () => {
     query {
       twitter: file(relativePath: { eq: "twitter.png" }) {
         childImageSharp {
-          fixed(height: 20) {
+          fixed(height: 30) {
             ...GatsbyImageSharpFixed
           }
         }
