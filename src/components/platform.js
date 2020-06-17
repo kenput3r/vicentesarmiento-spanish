@@ -39,7 +39,8 @@ const Title = styled.h3`
   display: none;
 `
 const Excerpt = styled.p`
-  text-align: justify;
+  text-align: left;
+  padding: 0 20px;
 
   a {
     color: rgb(34, 66, 137);
@@ -219,27 +220,27 @@ const Platform = () => {
         <InlineBlock>
           <Icon><Img fluid={Images.affordableHousing_op0d.childImageSharp.fluid} /></Icon>
           <Title>Affordable Houseing</Title>
-          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/affordable-housing-in-santa-ana" title="Read more about Vicente's plans for affordable housing in Santa Ana">Read More</Link></Excerpt>
+          <Excerpt>Working families deserve a safe, stable, and affordable place to live. <br /> <Link to="/issues/affordable-housing-in-santa-ana" title="Read more about Vicente's plans for affordable housing in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
           <Icon><Img fluid={Images.investmentInYouth_op0c.childImageSharp.fluid} /></Icon>
           <Title>Education <br />First</Title>
-          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/investing-in-santa-ana-youth" title="Read more about Vicente's plans for education in Santa Ana">Read More</Link></Excerpt>
+          <Excerpt>Santa Ana must champion policies and programs that invest in strengthening the next generation. <br /> <Link to="/issues/investing-in-santa-ana-youth" title="Read more about Vicente's plans for education in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
           <Icon><Img fluid={Images.reducingHomelessness_op0c.childImageSharp.fluid} /></Icon>
           <Title>Reducing Homelessness</Title>
-          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/homelessness-in-santa-ana" title="Read more about Vicente's plans for reducing homelessness in Santa Ana">Read More</Link></Excerpt>
+          <Excerpt>Our community must come together to combat the disproportionate impacts of the homelessness crisis. <br /> <Link to="/issues/homelessness-in-santa-ana" title="Read more about Vicente's plans for reducing homelessness in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
           <Icon><Img fluid={Images.saferNeighborhoods_op0c.childImageSharp.fluid} /></Icon>
           <Title>Safer Neighborhoods</Title>
-          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/safer-neighborhoods-in-santa-ana" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">Read More</Link></Excerpt>
+          <Excerpt>Our City should be smart on crime by efficiently using tax dollars to reach crime reduction goals. <br /> <Link to="/issues/safer-neighborhoods-in-santa-ana" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
           <Icon><Img fluid={Images.publicHealth_op0c.childImageSharp.fluid} /></Icon>
           <Title>Public Health</Title>
-          <Excerpt>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /> <Link to="/issues/public-health/" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">Read More</Link></Excerpt>
+          <Excerpt>We must work together to create a vibrant, safe, and healthy environment for all of our residents. <br /> <Link to="/issues/public-health/" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">Read More</Link></Excerpt>
         </InlineBlock>
       </Wrapper>
     </Container>
