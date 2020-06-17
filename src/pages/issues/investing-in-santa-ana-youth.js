@@ -52,12 +52,85 @@ const H1 = styled.h1`
     font-size: 16px;
   }
 `
-const Content = styled.div`
-  max-width: 1140px;
+const H3 = styled.h3`
+  color: rgb(34, 66, 137);
+  font-size: 2rem;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
+  width: 550px;
+  max-width: 100%;
+`
+const Content = styled.div`
   margin-bottom: 30px;
+`
+const Wrapper = styled.div`
+  max-width: 1140px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
+`
+const Table = styled.div`
+  display: table;
+  margin: 50px 0;
+  padding: 50px 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+    &.yellow {
+      flex-direction: column;
+    }
+  }
+
+  &.yellow {
+    background-color: #f2c811;
+  }
+
+  &.slanted {
+    &:before,
+    &:after {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden;
+    }
+  }
+
+  &.sltr {
+    &:before {
+      top: 0;
+      transform: skewY(1.5deg);
+      transform-origin: 100% 0;
+    }
+    
+    &:after {
+      bottom: 0;
+      transform: skewY(-1.5deg);
+      transform-origin: 100%;
+    }
+  }
+`
+const TableCell = styled.div`
+  display: table-cell;
+  padding: 50px;
+  width: 50%;
+  vertical-align: middle;
+
+  @media (max-width: 767px) {
+    display: block;
+    padding: 10px;
+    width: 100%;
+  }
 `
 const Page = () => {
   const Images = useStaticQuery(graphql`
@@ -76,6 +149,34 @@ const Page = () => {
           }
         }
       }
+      one: file(relativePath: { eq: "invest-in-youth-afterschool.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      two: file(relativePath: { eq: "invest-in-youth-alternatives.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      three: file(relativePath: { eq: "invest-in-youth-scholarship.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      four: file(relativePath: { eq: "invest-in-youth-literacy.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return(
@@ -86,25 +187,58 @@ const Page = () => {
         <HeroContainer>
           <HeadingContainer>
             <H1 className="page-title">
-              Education In Santa Ana <br />
-              <small>Invensting in our youth.</small>
+              Invensting in our youth
             </H1>
           </HeadingContainer>
-          <Img fluid={Images.heroImage.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
+          <Img fluid={Images.heroImage.childImageSharp.fluid} alt="School campus in Santa Ana" />
         </HeroContainer>
         <Content>
-          <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
-            <Img fluid={Images.educationFirst_op0.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
-          </div>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-          </p>
-          <p>
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-          </p>
+          <Wrapper>
+            <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
+              <Img fluid={Images.educationFirst_op0.childImageSharp.fluid} alt="Investment In Youth" />
+            </div>
+            <h2 style={{textAlign: "center"}}>Santa Ana must champion policies and programs that invest in strengthening the next generation.</h2>
+          </Wrapper>
+          <Table className="yellow slanted sltr">
+            <TableCell>
+            <Img fluid={Images.one.childImageSharp.fluid} alt="Kids working on a project" />
+            </TableCell>
+            <TableCell>
+              <H3>
+                Partner with educational institutions to expand opportunities through joint use facilities and afterschool programs.
+              </H3>
+            </TableCell>
+          </Table>
+          <Table>
+            <TableCell>
+              <H3>
+                Offer alternatives to juvenile incarceration through evidenced based intervention programs. 
+              </H3>
+            </TableCell>
+            <TableCell>
+              <Img fluid={Images.two.childImageSharp.fluid} alt="Youths learning new skills" />
+            </TableCell>
+          </Table>
+          <Table className="yellow slanted sltr">
+            <TableCell>
+              <Img fluid={Images.three.childImageSharp.fluid} alt="Money going towards scholarships" />
+            </TableCell>
+            <TableCell>
+              <H3>
+                Develop the ‘Santa Ana Promise’ with private sector partners to ensure that paid internships, mentorship opportunities, and scholarships are available to all students. 
+              </H3>
+            </TableCell>
+          </Table>
+          <Table>
+            <TableCell>
+              <H3>
+                Increase youth literacy by opening library branches and expanding library services. 
+              </H3>
+            </TableCell>
+            <TableCell>
+              <Img fluid={Images.four.childImageSharp.fluid} alt="Child sitting on books, reading a book" />
+            </TableCell>
+          </Table>
         </Content>
       </Container>
     </Layout>
