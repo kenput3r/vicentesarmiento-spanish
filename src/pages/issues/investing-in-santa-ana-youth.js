@@ -182,12 +182,12 @@ const Page = () => {
   return(
     <Layout>
       <PageHeader />
-      <SEO title="Education In Santa Ana" />
+      <SEO title="Investing In Santa Ana's Youth" />
       <Container>
         <HeroContainer>
           <HeadingContainer>
             <H1 className="page-title">
-              Invensting in our youth
+              Investing In Our Youth
             </H1>
           </HeadingContainer>
           <Img fluid={Images.heroImage.childImageSharp.fluid} alt="School campus in Santa Ana" />
