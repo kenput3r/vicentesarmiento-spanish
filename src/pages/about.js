@@ -69,7 +69,7 @@ const Page = () => {
           }
         }
       }
-      saferNeighborhoods_op0: file(relativePath: { eq: "vicente-con-la-gente.png" }) {
+      badge: file(relativePath: { eq: "vicente-con-la-gente-2.png" }) {
         childImageSharp {
           fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
@@ -94,7 +94,7 @@ const Page = () => {
         </HeroContainer>
         <Content>
           <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
-            <Img fluid={Images.saferNeighborhoods_op0.childImageSharp.fluid} alt="Santa Ana buildings with text around it reading Vicente Con La Gente, Sarmiento" />
+            <Img fluid={Images.badge.childImageSharp.fluid} alt="Santa Ana buildings with text around it reading Vicente Con La Gente, Sarmiento" />
           </div>
           <p>Vicente Sarmiento has proudly represented Ward 1 on the Santa Ana City Council since 2007.</p>
           <p>Councilmember Sarmiento is currently the President of the Orange County Water District Board of Directors.  He also served as the City Council’s Mayor Pro Tem, and was Chairman of the Oversight Board of the Successor Agency to the former Redevelopment Agency for the City of Santa Ana.  Councilmember Sarmiento chaired the City Council Committees for Development, Transportation, and Legislation.  He was also a member of the Finance, Economic Development & Technology Committee.</p>
