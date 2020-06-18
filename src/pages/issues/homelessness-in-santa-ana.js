@@ -197,7 +197,7 @@ const Page = () => {
             <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
               <Img fluid={Images.reducingHomelessness_op0.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
             </div>
-            <h2 style={{textAlign: "center"}}>Santa Ana must champion policies and programs that invest in strengthening the next generation.</h2>
+            <h2 style={{textAlign: "center"}}>Our community must come together to combat the disproportionate impacts of the homelessness crisis.</h2>
           </Wrapper>
           <Table className="yellow slanted sltr">
             <TableCell>
