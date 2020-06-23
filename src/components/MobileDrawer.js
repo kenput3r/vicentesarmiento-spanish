@@ -44,7 +44,7 @@ const MobileDrawer = ({drawerOpen}) => {
     <StyledMenu drawerOpen={drawerOpen}>
       <Link to="/">HOME</Link>
       <Link to="/about/">About Vicente</Link>
-      <Link to="/contact/">CONTACT</Link>
+      <Link to="/contact/">Get Involved</Link>
       <Link to="/gallery">Media</Link>
     </StyledMenu>
   )

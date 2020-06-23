@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Logo from "./logo"
-import Badge from "./badge"
-import Donate from "./donate"
 import MobileHeader from "./MobileHeader"
 import MobileDrawer from "./MobileDrawer"
 
@@ -19,25 +17,33 @@ const DesktopHeader = styled.nav`
     display: none;
   }
 `
+const Donate = styled.a`
+  background-color: #f1c80f;
+  border: 2px solid #f1c80f;
+  border-radius: 3px;
+  color: #224289;
+  display: inline-block;
+  padding: 13px;
+  text-decoration: none;
+  vertical-align: top;
+`
 
 const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          language
+        }
+      }
+    }
+  `)
+  const language = data.site.siteMetadata.language || `english`
 
-  //const [badgeLift, setBadgeLift] = useState(0)
   const [logoWidth, setLogoWidth] = useState(400)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [headerBackground, setHeaderBackground] = useState(0)
   const [drawerOpen, setDrawerOpen] = useState(false)
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', e => {
-  //     if(window.scrollY > lastScrollY) {
-  //       setLastScrollY(window.scrollY)
-  //       if(window.scrollY <= 150) {
-  //         setBadgeLift(window.scrollY * -1)
-  //       }
-  //     }
-  //   })
-  // })
 
   const handleScroll = (e) => {
     if(window.scrollY > lastScrollY) {
@@ -61,6 +67,29 @@ const Header = () => {
     }
   }, [])
 
+  const text = {
+    home: {
+      english: `Home`,
+      spanish: `Inicio`
+    },
+    about: {
+      english: `About Vicente`,
+      spanish: `Acerca De Vicente`
+    },
+    contact: {
+      english: `Get Involved`,
+      spanish: ``
+    },
+    media: {
+      english: `Media`,
+      spanish: `Fotos`
+    },
+    donate: {
+      english: `Donate`,
+      spanish: `Donacion`
+    }
+  }
+
   return (
     <header
       style={{
@@ -78,20 +107,15 @@ const Header = () => {
           </h1>
         </div>
         <div style={{display:"table-cell", width:"70%", textAlign:"right", verticalAlign:"middle"}}>
-          <div className="desktop-link"><Link to="/">Home</Link></div>
-          <div className="desktop-link"><Link to="/about/">About Vicente</Link></div>
-          <div className="desktop-link"><Link to="/contact/">Contact</Link></div>
-          <div className="desktop-link"><Link to="/gallery/">Media</Link></div>
-          <Donate inverted={true} />
+          <div className="desktop-link"><Link to="/">{text.home[language]}</Link></div>
+          <div className="desktop-link"><Link to="/about/">{text.about[language]}</Link></div>
+          <div className="desktop-link"><Link to="/contact/">{text.contact[language]}</Link></div>
+          <div className="desktop-link"><Link to="/gallery/">{text.media[language]}</Link></div>
+          <Donate className="button" href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">{text.donate[language]}</Donate>
         </div>
       </DesktopHeader>
       <MobileHeader drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
       <MobileDrawer drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
-      {/* <div style={{textAlign:"center", marginTop:badgeLift}}>
-        <div style={{maxWidth:300, margin:"0 auto"}}>
-          <Badge />
-        </div>
-      </div> */}
     </header>
   )
 }

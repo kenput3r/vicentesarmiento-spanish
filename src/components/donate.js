@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const Donate = ({ inverted }) => {
+
   const primary = !inverted ? "#f1c80f" : "#f1c80f"
   const secondary = !inverted ? "#224289" : "#224289"
   const buttonStyles = {
@@ -15,8 +16,15 @@ const Donate = ({ inverted }) => {
     verticalAlign: "top"
   }
 
+  const text = {
+    donate: {
+      english: `Donate`,
+      spanish: `Donacion`
+    }
+  }
+
   return (
-    <a className="button" style={buttonStyles} href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">DONATE</a>
+    <a className="button" style={buttonStyles} href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">Donate</a>
   )
 }
 Donate.propTypes = {

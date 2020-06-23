@@ -201,7 +201,7 @@ const Footer = () => {
           </div>
           <div>
             <List>
-              <li><Link to="/issues/affordable-housing-in-santa-ana/">Affordable Houseing</Link></li>
+              <li><Link to="/issues/affordable-housing-in-santa-ana/">Affordable Housing</Link></li>
               <li><Link to="/issues/homelessness-in-santa-ana/">Reducing Homelessness</Link></li>
               <li><Link to="/issues/investing-in-santa-ana-youth/">Invest In Youth</Link></li>
               <li><Link to="/issues/public-health/">Public Health</Link></li>
