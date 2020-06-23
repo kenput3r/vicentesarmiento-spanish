@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import navigationText from "./navigationText"
 
 const StyledMenu = styled.nav`
   display: none;
@@ -39,13 +40,25 @@ const StyledMenu = styled.nav`
 `;
 
 const MobileDrawer = ({drawerOpen}) => {
-
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          language
+        }
+      }
+    }
+  `)
+  const language = data.site.siteMetadata.language || `english`
+  const text = {
+    ...navigationText
+  }
   return (
     <StyledMenu drawerOpen={drawerOpen}>
-      <Link to="/">HOME</Link>
-      <Link to="/about/">About Vicente</Link>
-      <Link to="/contact/">Get Involved</Link>
-      <Link to="/gallery">Media</Link>
+      <Link to="/">{text.home[language]}</Link>
+      <Link to="/about/">{text.about[language]}</Link>
+      <Link to="/contact/">{text.contact[language]}</Link>
+      <Link to="/gallery">{text.media[language]}</Link>
     </StyledMenu>
   )
 }

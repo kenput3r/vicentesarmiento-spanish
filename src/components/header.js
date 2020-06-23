@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Logo from "./logo"
 import MobileHeader from "./MobileHeader"
 import MobileDrawer from "./MobileDrawer"
+import navigationText from "./navigationText"
 
 const DesktopHeader = styled.nav`
   display: table;
@@ -68,25 +69,10 @@ const Header = () => {
   }, [])
 
   const text = {
-    home: {
-      english: `Home`,
-      spanish: `Inicio`
-    },
-    about: {
-      english: `About Vicente`,
-      spanish: `Acerca De Vicente`
-    },
-    contact: {
-      english: `Get Involved`,
-      spanish: ``
-    },
-    media: {
-      english: `Media`,
-      spanish: `Fotos`
-    },
-    donate: {
-      english: `Donate`,
-      spanish: `Donacion`
+    ...navigationText,
+    logoTitle: {
+      english: `Vicente Sarmiento for Mayor`,
+      spanish: `Vicente Sarmiento para Alcalde`,
     }
   }
 
@@ -103,7 +89,7 @@ const Header = () => {
       <DesktopHeader role="navigation">
         <div style={{display:"table-cell", width:"30%"}}>
           <h1 style={{ margin: 0, maxWidth: logoWidth }}>
-            <a href="/" title="Vicente Sarmiento for Mayor"><Logo /></a>
+            <a href="/" title={text.logoTitle[language]}><Logo /></a>
           </h1>
         </div>
         <div style={{display:"table-cell", width:"70%", textAlign:"right", verticalAlign:"middle"}}>

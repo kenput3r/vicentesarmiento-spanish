@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import MobileLogo from "./MobileLogo"
@@ -92,13 +93,29 @@ div {
 `
 
 const MobileHeader = ({drawerOpen, setDrawerOpen}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          language
+        }
+      }
+    }
+  `)
+  const language = data.site.siteMetadata.language || `english`
+  const text = {
+    donate: {
+      english: `Donate`,
+      spanish: `Donacion`
+    }
+  }
   return(
     <Container role="navigation">
       <LogoContainer>
         <MobileLogo />
       </LogoContainer>
       <DonateContainer>
-        <DonateButton href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">DONATE</DonateButton>
+        <DonateButton href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">{text.donate[language]}</DonateButton>
       </DonateContainer>
       <BurgerContainer>
         <Burger drawerOpen={drawerOpen} onClick={() => setDrawerOpen(!drawerOpen)}>

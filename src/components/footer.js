@@ -1,12 +1,13 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Facebook from "./facebook"
 import Twitter from "./twitter"
 import YouTube from "./youtube"
 import Instagram from "./instagram"
 import Email from "./email"
+import navigationText from "./navigationText"
 
 const Container = styled.footer`
   border-top: 1px solid #ccc;
@@ -165,6 +166,23 @@ const postContact = async (event, email, phone, callBack) => {
 
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          language
+        }
+      }
+    }
+  `)
+  const language = data.site.siteMetadata.language || `english`
+  const text = {
+    ...navigationText,
+    affordableHousing: {
+      english: 'Affordable Housing',
+      spanish: 'Vivienda Asequible'
+    }
+  }
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [submitText, setSubmitText] = useState('JOIN US')
@@ -193,10 +211,10 @@ const Footer = () => {
         <Links>
           <div>
             <List>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about/">About Vicente</Link></li>
-              <li><Link to="/contact/">Contact</Link></li>
-              <li><Link to="/gallery/">Media</Link></li>
+              <li><Link to="/">{text.home[language]}</Link></li>
+              <li><Link to="/about/">{text.about[language]}</Link></li>
+              <li><Link to="/contact/">{text.contact[language]}</Link></li>
+              <li><Link to="/gallery/">{text.media[language]}</Link></li>
             </List>
           </div>
           <div>
