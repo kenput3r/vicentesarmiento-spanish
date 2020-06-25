@@ -49,42 +49,84 @@ const Excerpt = styled.p`
 const Platform = () => {
   const data = useStaticQuery(graphql`
   query {
-    educationFirst_op0c: file(relativePath: { eq: "education-first_op0c.png" }) {
+    english_educationFirst_op0c: file(relativePath: { eq: "education-first_op0c.png" }) {
       childImageSharp {
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    reducingHomelessness_op0c: file(relativePath: { eq: "reducing-homelessness_op0c.png" }) {
+    spanish_educationFirst_op0c: file(relativePath: { eq: "education-first_op0c-spanish.png" }) {
       childImageSharp {
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    saferNeighborhoods_op0c: file(relativePath: { eq: "safer-neighborhoods_op0c.png" }) {
+    english_reducingHomelessness_op0c: file(relativePath: { eq: "reducing-homelessness_op0c.png" }) {
       childImageSharp {
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    investmentInYouth_op0c: file(relativePath: { eq: "investment-in-youth_op0c.png" }) {
+    spanish_reducingHomelessness_op0c: file(relativePath: { eq: "reducing-homelessness_op0c-spanish.png" }) {
       childImageSharp {
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    publicHealth_op0c: file(relativePath: { eq: "public-health_op0c.png" }) {
+    english_saferNeighborhoods_op0c: file(relativePath: { eq: "safer-neighborhoods_op0c.png" }) {
       childImageSharp {
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    affordableHousing_op0d: file(relativePath: { eq: "affordable-housing_op0d.png" }) {
+    spanish_saferNeighborhoods_op0c: file(relativePath: { eq: "safer-neighborhoods_op0c-spanish.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    english_investmentInYouth_op0c: file(relativePath: { eq: "investment-in-youth_op0c.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    spanish_investmentInYouth_op0c: file(relativePath: { eq: "investment-in-youth_op0c-spanish.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    english_publicHealth_op0c: file(relativePath: { eq: "public-health_op0c.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    spanish_publicHealth_op0c: file(relativePath: { eq: "public-health_op0c-spanish.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    english_affordableHousing_op0d: file(relativePath: { eq: "affordable-housing_op0d.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    spanish_affordableHousing_op0d: file(relativePath: { eq: "affordable-housing_op0d-spanish.png" }) {
       childImageSharp {
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
@@ -108,23 +150,23 @@ const Platform = () => {
       <Wrapper>
         <h2>{text.vicentePriorities[language]}</h2>
         <InlineBlock>
-          <Icon><Img fluid={data.affordableHousing_op0d.childImageSharp.fluid} alt={text.affordableHousing.label[language]} /></Icon>
+          <Icon><Img fluid={data[`${language}_affordableHousing_op0d`].childImageSharp.fluid} alt={text.affordableHousing.label[language]} /></Icon>
           <Excerpt>{text.affordableHousing.excerpt[language]} <br /> <Link to="/issues/affordable-housing-in-santa-ana" title="Read more about Vicente's plans for affordable housing in Santa Ana">{text.readMore[language]}</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={data.investmentInYouth_op0c.childImageSharp.fluid} alt={text.investmentInYouth.label[language]} /></Icon>
+          <Icon><Img fluid={data[`${language}_investmentInYouth_op0c`].childImageSharp.fluid} alt={text.investmentInYouth.label[language]} /></Icon>
           <Excerpt>{text.investmentInYouth.excerpt[language]} <br /> <Link to="/issues/investing-in-santa-ana-youth" title="Read more about Vicente's plans for education in Santa Ana">{text.readMore[language]}</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={data.reducingHomelessness_op0c.childImageSharp.fluid} alt={text.reducingHomelessness.label[language]} /></Icon>
+          <Icon><Img fluid={data[`${language}_reducingHomelessness_op0c`].childImageSharp.fluid} alt={text.reducingHomelessness.label[language]} /></Icon>
           <Excerpt>{text.reducingHomelessness.excerpt[language]} <br /> <Link to="/issues/homelessness-in-santa-ana" title="Read more about Vicente's plans for reducing homelessness in Santa Ana">{text.readMore[language]}</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={data.saferNeighborhoods_op0c.childImageSharp.fluid} alt={text.saferNeighborhoods.label[language]} /></Icon>
+          <Icon><Img fluid={data[`${language}_saferNeighborhoods_op0c`].childImageSharp.fluid} alt={text.saferNeighborhoods.label[language]} /></Icon>
           <Excerpt>{text.saferNeighborhoods.excerpt[language]} <br /> <Link to="/issues/safer-neighborhoods-in-santa-ana" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">{text.readMore[language]}</Link></Excerpt>
         </InlineBlock>
         <InlineBlock>
-          <Icon><Img fluid={data.publicHealth_op0c.childImageSharp.fluid} alt={text.publicHealth.label[language]} /></Icon>
+          <Icon><Img fluid={data[`${language}_publicHealth_op0c`].childImageSharp.fluid} alt={text.publicHealth.label[language]} /></Icon>
           <Excerpt>{text.publicHealth.excerpt[language]} <br /> <Link to="/issues/public-health/" title="Read more about Vicente's plans for promoting safer neighborhoods in Santa Ana">{text.readMore[language]}</Link></Excerpt>
         </InlineBlock>
       </Wrapper>

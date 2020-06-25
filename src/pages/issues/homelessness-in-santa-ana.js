@@ -144,7 +144,14 @@ const Page = () => {
           }
         }
       }
-      reducingHomelessness_op0: file(relativePath: { eq: "reducing-homelessness_op0c.png" }) {
+      english_reducingHomelessness_op0: file(relativePath: { eq: "reducing-homelessness_op0c.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spanish_reducingHomelessness_op0: file(relativePath: { eq: "reducing-homelessness_op0c-spanish.png" }) {
         childImageSharp {
           fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
@@ -200,7 +207,7 @@ const Page = () => {
         <Content>
           <Wrapper>
             <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
-              <Img fluid={Images.reducingHomelessness_op0.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
+              <Img fluid={Images[`${language}_reducingHomelessness_op0`].childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
             </div>
             <h2 style={{textAlign: "center"}}>{text.excerpt[language]}</h2>
           </Wrapper>

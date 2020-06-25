@@ -12,8 +12,16 @@ const Container = styled.div`
 
   @media (max-width: 767px) {
     background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: auto 70%;
+    background-position: top right;
     display: table-cell;
     vertical-align: bottom;
+  }
+  
+  @media (max-width: 375px) and (min-height: 812px) {
+    background-color: #272d86;
+    background-position-x: 90%;
   }
 `
 const Title = styled.div`

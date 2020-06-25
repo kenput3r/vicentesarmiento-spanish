@@ -144,7 +144,14 @@ const Page = () => {
           }
         }
       }
-      educationFirst_op0: file(relativePath: { eq: "investment-in-youth_op0c.png" }) {
+      english_educationFirst_op0: file(relativePath: { eq: "investment-in-youth_op0c.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spanish_educationFirst_op0: file(relativePath: { eq: "investment-in-youth_op0c-spanish.png" }) {
         childImageSharp {
           fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
@@ -200,7 +207,7 @@ const Page = () => {
         <Content>
           <Wrapper>
             <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
-              <Img fluid={Images.educationFirst_op0.childImageSharp.fluid} alt="Investment In Youth" />
+              <Img fluid={Images[`${language}_educationFirst_op0`].childImageSharp.fluid} alt="Investment In Youth" />
             </div>
             <h2 style={{textAlign: "center"}}>{text.excerpt[language]}</h2>
           </Wrapper>

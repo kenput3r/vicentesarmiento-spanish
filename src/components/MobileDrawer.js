@@ -9,7 +9,7 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: #224289;
-  height: 90vh;
+  height: 100vh;
   text-align: left;
   padding: 2rem;
   position: absolute;

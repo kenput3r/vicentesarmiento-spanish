@@ -144,7 +144,14 @@ const Page = () => {
           }
         }
       }
-      affordableHousing_op0: file(relativePath: { eq: "affordable-housing_op0d.png" }) {
+      english_affordableHousing_op0: file(relativePath: { eq: "affordable-housing_op0d.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spanish_affordableHousing_op0: file(relativePath: { eq: "affordable-housing_op0d-spanish.png" }) {
         childImageSharp {
           fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
@@ -200,7 +207,7 @@ const Page = () => {
         <Content>
           <Wrapper>
             <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
-              <Img fluid={Images.affordableHousing_op0.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
+              <Img fluid={Images[`${language}_affordableHousing_op0`].childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
             </div>
             <h2 style={{textAlign: "center"}}>{text.excerpt[language]}</h2>
           </Wrapper>

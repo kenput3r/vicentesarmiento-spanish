@@ -16,6 +16,15 @@ const Container = styled.div`
   left: 0;
   padding: 10px;
   z-index: 100;
+
+  @media (max-width: 767px) {
+    top: 80vh;
+    left: auto;
+    right: 0;
+    transform: rotate(90deg);
+    margin-left: initial;
+    margin-right: -20px;
+  }
 `
 
 const LanguageToggle = () => {

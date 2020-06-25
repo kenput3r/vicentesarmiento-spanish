@@ -97,7 +97,7 @@ const Page = () => {
       spanish: ``
     },
     p3: {
-      english: `Councilmember Sarmiento’s priorities are increasing park space, reducing homelessness, providing more affordable housing for our working families, investing in youth programs, and supporting efforts to make our neighborhoods safer.  He helped draft the Housing Opportunity Ordinance, ensured that a fiscal reserve fund was created in the aftermath of the 2008 Economic Recession, and lead the City Council’s adoption of public policies to protect the rights of all immigrants in Santa Ana.`,
+      english: `Councilmember Sarmiento’s priorities are increasing park space, reducing homelessness, providing more affordable housing for our working families, investing in youth programs, and supporting efforts to make our neighborhoods safer.  He helped draft the Housing Opportunity Ordinance, ensured that a fiscal reserve fund was created in the aftermath of the 2008 Economic Recession, and led the City Council’s adoption of public policies to protect the rights of all immigrants in Santa Ana.`,
       spanish: ``
     },
     p4: {

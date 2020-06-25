@@ -7,6 +7,7 @@ import Videos from "../components/videos"
 import Hero from "../components/hero"
 import Platform from "../components/platform"
 import Parallax from "../components/parallax"
+import PopUpForm from "../components/PopUpForm"
 
 const HeroContainer = styled.div`
   @media (max-width: 767px) {
@@ -39,6 +40,7 @@ const IndexPage = () => (
     <Platform />
     <Parallax />
     <Videos />
+    <PopUpForm />
   </Layout>
 )
 

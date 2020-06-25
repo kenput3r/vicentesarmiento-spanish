@@ -321,6 +321,10 @@ const text = {
   followUs: {
     english: `Follow us on:`,
     spanish: ``
+  },
+  submit: {
+    english: `SUBMIT`,
+    spanish: `ENVIAR`
   }
 }
 
@@ -380,7 +384,7 @@ const Contact = () => {
                   <span></span>
                   <small>{text.receiveEmails[language]}</small>
                 </Label>
-                <Input type="submit" value="SUBMIT" onClick={event => postContact(event, email, fName, lName, phone, sendNewsletter)} />
+                <Input type="submit" value={text.submit[language]} onClick={event => postContact(event, email, fName, lName, phone, sendNewsletter)} />
               </Form>
             </Cell>
             <Cell className="valign-center">

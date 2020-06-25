@@ -144,7 +144,14 @@ const Page = () => {
           }
         }
       }
-      saferNeighborhoods_op0: file(relativePath: { eq: "safer-neighborhoods_op0c.png" }) {
+      english_saferNeighborhoods_op0c: file(relativePath: { eq: "safer-neighborhoods_op0c.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spanish_saferNeighborhoods_op0c: file(relativePath: { eq: "safer-neighborhoods_op0c-spanish.png" }) {
         childImageSharp {
           fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
@@ -200,7 +207,7 @@ const Page = () => {
         <Content>
           <Wrapper>
             <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
-              <Img fluid={Images.saferNeighborhoods_op0.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
+              <Img fluid={Images[`${language}_saferNeighborhoods_op0c`].childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
             </div>
             <h2 style={{textAlign: "center"}}>{text.excerpt[language]}</h2>
           </Wrapper>
