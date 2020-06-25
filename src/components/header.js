@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import Logo from "./logo"
 import MobileHeader from "./MobileHeader"
 import MobileDrawer from "./MobileDrawer"
+import language from "./language"
 import navigationText from "./navigationText"
 
 const DesktopHeader = styled.nav`
@@ -30,17 +31,6 @@ const Donate = styled.a`
 `
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          language
-        }
-      }
-    }
-  `)
-  const language = data.site.siteMetadata.language || `english`
-
   const [logoWidth, setLogoWidth] = useState(400)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [headerBackground, setHeaderBackground] = useState(0)

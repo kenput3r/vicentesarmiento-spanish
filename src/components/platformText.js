@@ -2,67 +2,67 @@ export default {
   affordableHousing: {
     label: {
       english: `Affordable Housing`,
-      spanish: ``,
+      spanish: `Vivienda Asequible`,
     },
     excerpt: {
       english: `Working families deserve a safe, stable, and affordable place to live.`,
-      spanish: ``
+      spanish: `Las familias trabajadoras merecen un lugar seguro, estable y asequible para vivir.`
     },
     bullets: [
       {
         english: `Build workforce and family housing with partners at Santa Ana College, SAUSD, and local Churches.`,
-        spansih: ``
+        spansih: `Construir vivienda para trabajadores y familiares con nuestros socios en el Colegio de Santa Ana, el distrito escolar y las iglesias locales.`
       },
       {
         english: `Establish ‘missing middle’ development standards that balance the scale of new projects with the surrounding neighborhoods.`,
-        spansih: ``
+        spansih: `Establecer estándares de desarrollo para los hogares del "medio perdido" que equilibren la escala de los nuevos proyectos con los vecindarios alrededor.`
       },
       {
         english: `Defend the Housing Opportunity Ordinance to ensure that new development includes affordable housing units.`,
-        spansih: ``
+        spansih: `Proteger la Ordenanza de Oportunidades de Vivienda para garantizar que el nuevo desarrollo incluya unidades de vivienda asequible.`
       },
       {
         english: `Support efforts to pass a rent-stabilization ordinance.`,
-        spansih: ``
+        spansih: `Apoyar los esfuerzos para aprobar una ordenanza de estabilización de rentas.`
       }
     ]
   },
   investmentInYouth: {
     label: {
       english: `Investment In Youth`,
-      spanish: ``,
+      spanish: `Inversión en la Juventud`,
     },
     excerpt: {
       english: `Santa Ana must champion policies and programs that invest in strengthening the next generation.`,
-      spanish: ``
+      spanish: `Santa Ana debe abogar por polízas y programas que inviertan en el fortalecimiento de la próxima generación.`
     },
     bullets: [
       {
         english: `Partner with educational institutions to expand opportunities through joint use facilities and afterschool programs.`,
-        spansih: ``
+        spansih: `Asociaciones con instituciones educativas para ampliar las oportunidades a través del uso conjunto de facilidades escolares y programas después de la escuela.`
       },
       {
         english: `Offer alternatives to juvenile incarceration through evidenced based intervention programs.`,
-        spansih: ``
+        spansih: `Ofrecer alternativas al encarcelamiento de menores a través de programas de intervención basados en evidencia.`
       },
       {
         english: `Develop the ‘Santa Ana Promise’ with private sector partners to ensure that paid internships, mentorship opportunities, and scholarships are available to all students.`,
-        spansih: ``
+        spansih: `Desarrollar la "Promesa de Santa Ana" con socios del sector privado para garantizar pasantías pagadas, oportunidades de tutoría y becas disponibles para todos los estudiantes.`
       },
       {
         english: `Increase youth literacy by opening library branches and expanding library services.`,
-        spansih: ``
+        spansih: `Aumentar la alfabetización de los jóvenes abriendo nuevas bibliotecas y ampliando los servicios de las bibliotecas actual.`
       }
     ]
   },
   reducingHomelessness: {
     label: {
       english: `Reducing Homelessness`,
-      spanish: ``,
+      spanish: `Reducir la Carencia de Hogar`,
     },
     excerpt: {
       english: `Our community must come together to combat the disproportionate impacts of the homelessness crisis.`,
-      spanish: ``
+      spanish: `Nuestra comunidad debe unirse para combatir los impactos desproporcionados en la crisis de carencia de hogar.`
     },
     bullets: [
       {
@@ -86,11 +86,11 @@ export default {
   saferNeighborhoods: {
     label: {
       english: `Safer Neighborhoods`,
-      spanish: ``,
+      spanish: `Vecindarios Seguros`,
     },
     excerpt: {
       english: `Our City should be smart on crime by efficiently using tax dollars to reach crime reduction goals.`,
-      spanish: ``
+      spanish: `Nuestra ciudad debe ser inteligente con respecto al delito mediante el uso eficiente del dinero de los impuestos para alcanzar los objetivos de reducir los delitos.`
     },
     bullets: [
       {
@@ -114,11 +114,11 @@ export default {
   publicHealth: {
     label: {
       english: `Public Health`,
-      spanish: ``,
+      spanish: `Salud del Público`,
     },
     excerpt: {
       english: `We must work together to create a vibrant, safe, and healthy environment for all of our residents.`,
-      spanish: ``
+      spanish: `Tenemos que trabajar juntos para crear un ambiente vibrante, seguro y saludable para todos nuestros residentes.`
     },
     bullets: [
       {

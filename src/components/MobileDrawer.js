@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
+import language from "./language"
 import navigationText from "./navigationText"
 
 const StyledMenu = styled.nav`
@@ -40,16 +41,6 @@ const StyledMenu = styled.nav`
 `;
 
 const MobileDrawer = ({drawerOpen}) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          language
-        }
-      }
-    }
-  `)
-  const language = data.site.siteMetadata.language || `english`
   const text = {
     ...navigationText
   }

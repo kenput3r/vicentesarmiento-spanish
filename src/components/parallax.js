@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
+import language from "./language"
 import backgroundImage from "../images/vicente-sarmiento-for-mayor-background.jpg"
 
 const Container = styled.div`
@@ -52,14 +52,31 @@ const Heading2 = styled.div`
   text-transform: uppercase;
 `
 const Parallax = () => {
-
+  const text = {
+    h1: {
+      english: `Leadership`,
+      spanish: `Nuevo`
+    },
+    h2: {
+      english: `Santa Ana`,
+      spanish: `Liderazgo`
+    },
+    h3: {
+      english: `Can Trust`,
+      spanish: `Para Un Brillante`
+    },
+    h4: {
+      english: `For A Bright Future`,
+      spanish: `Santa Ana`
+    }
+  }
   return (
-    <Container>
+    <Container role="img" aria-label="Vicente Sarmiento">
       <Title>
-        <Heading1>Leadership</Heading1>
-        <Heading2>SANTA ANA</Heading2>
-        <Heading1>CAN TRUST</Heading1>
-        <Heading2>FOR A BRIGHT FUTURE</Heading2>
+        <Heading1>{text.h1[language]}</Heading1>
+        <Heading2>{text.h2[language]}</Heading2>
+        <Heading1>{text.h3[language]}</Heading1>
+        <Heading2>{text.h4[language]}</Heading2>
       </Title>
     </Container>
   )

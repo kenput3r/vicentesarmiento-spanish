@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import PageHeader from "../components/PageHeader"
 import SEO from "../components/seo"
 import Video from "../components/video"
+import language from "../components/language"
 
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -43,13 +44,55 @@ const video5 = "https://drive.google.com/uc?export=download&id=1GyTFQwCvCwMZ_MDT
 const video6 = "https://drive.google.com/uc?export=download&id=12D2XcT37yipBLsQrQ5rPwYyJQrOY1UhJ"
 
 const videos = [
-  {download: video1, embed: "https://www.youtube.com/embed/031kkVNVm5Y", title: "Vicente Sarmiento Announces Santa Ana Mayoral Campaign"},
-  {download: video2, embed: "https://www.youtube.com/embed/Riu2-ytGg5c", title: "Update: California Moratorium on Evictions and Foreclosures 4/1/20"},
-  {download: video3, embed: "https://www.youtube.com/embed/_e5dMzqlrfw", title: "Sarmiento Health Message - English"},
-  {download: video4, embed: "https://www.youtube.com/embed/BhFNnes2t20", title: "Sarmiento Health Message - Spanish"},
-  {download: video5, embed: "https://www.youtube.com/embed/5Ni2wrR3vUw", title: "Sarmiento Water District Health Message - English"},
+  {
+    download: video1, 
+    embed: "https://www.youtube.com/embed/031kkVNVm5Y", 
+    title: {
+      english: "Vicente Sarmiento Announces Santa Ana Mayoral Campaign",
+      spanish: ``
+    }
+  },
+  {
+    download: video2, 
+    embed: "https://www.youtube.com/embed/Riu2-ytGg5c", 
+    title: {
+      english: "Update: California Moratorium on Evictions and Foreclosures 4/1/20",
+      spanish: ``
+    }
+  },
+  {
+    download: video3, 
+    embed: "https://www.youtube.com/embed/_e5dMzqlrfw", 
+    title: {
+      english: "Sarmiento Health Message - English",
+      spanish: ``
+    }
+  },
+  {
+    download: video4, 
+    embed: "https://www.youtube.com/embed/BhFNnes2t20", 
+    title: {
+      english: "Sarmiento Health Message - Spanish",
+      spanish: ``
+    }
+  },
+  {
+    download: video5, 
+    embed: "https://www.youtube.com/embed/5Ni2wrR3vUw", 
+    title: {
+      english: "Sarmiento Water District Health Message - English",
+      spanish: ``
+    }
+  },
 
-  {download: video6, embed: "https://www.youtube.com/embed/ULfPC5iR5IQ", title: "Sarmiento Water District Health Message - Spanish"}
+  {
+    download: video6, 
+    embed: "https://www.youtube.com/embed/ULfPC5iR5IQ", 
+    title: {
+      english: "Sarmiento Water District Health Message - Spanish",
+      spanish: ``
+    }
+  }
 ]
 
 const Container = styled.div`
@@ -139,26 +182,48 @@ const Gallery = ({ data }) => {
       callback()
     }
   }
+  const text = {
+    h1: {
+      english: `Media`,
+      spanish: `Fotos Y Videos`
+    },
+    videos: {
+      english: `Videos`,
+      spanish: `Videos`
+    },
+    photos: {
+      english: `Photos`,
+      spanish: `Fotos`
+    },
+    download: {
+      english: `download`,
+      spanish: `descargar`
+    },
+    close: {
+      english: `close`,
+      spanish: `salida`
+    }
+  }
   return (
   <Layout>
     <PageHeader />
     <SEO title="Downloadable Media With Vicente Sarmiento" />
     <Container className="content">
-      <h1 className="page-title">Media</h1>
+      <h1 className="page-title">{text.h1[language]}</h1>
       <Wrapper>
         <div style={{textAlign: "left", width: "100%"}}>
-          <H2>Videos</H2>
+          <H2>{text.videos[language]}</H2>
         </div>
         {videos.map((video, index) => (
           <div className="gallery-image video" key={`video`+index}>
-            <a role="button" tabIndex="0" key={`thumb-${index}`} onClick={() => openVideo(video.embed, video.download, video.title)} onKeyDown={(event) => handleKeyDown(event, () =>openVideo(video.embed, video.download, video.title))}>
+            <a role="button" tabIndex="0" key={`thumb-${index}`} onClick={() => openVideo(video.embed, video.download, video.title[language])} onKeyDown={(event) => handleKeyDown(event, () =>openVideo(video.embed, video.download, video.title[language]))}>
                 <Img fluid={data[`video${index+1}`].childImageSharp.fluid} alt={image_alts[index]} />
             </a>
-          <p style={{textAlign: "left", padding: "1.5%"}}>{video.title}</p>
+          <p style={{textAlign: "left", padding: "1.5%"}}>{video.title[language]}</p>
           </div>
         ))}
         <div style={{textAlign: "left", marginTop: 20, width: "100%"}}>
-          <H2>Photos</H2>
+          <H2>{text.photos[language]}</H2>
         </div>
         {images.map((image, index) => (
             <div className="gallery-image" key={`thumb-${index}`}>
@@ -173,8 +238,8 @@ const Gallery = ({ data }) => {
       <div>
         {activeImage ? <Img fluid={data[`img${activeImageIndex+1}b`].childImageSharp.fluid} alt={image_alts[activeImageIndex]} /> : ''}
         <p>
-          <span><a role="button" tabIndex="0" onClick={close} onKeyDown={(event) => handleKeyDown(event, close)} style={{color: "#224289", cursor: "pointer", marginTop: 5, padding: 5, display: "inline-block"}}>&times; close</a></span> 
-          <span><a href={activeImage} download style={{textDecoration: "none", color: "#224289", float: "right", marginTop: 5, padding: 5, display: "inline-block"}}>&darr; download</a></span>
+          <span><a role="button" tabIndex="0" onClick={close} onKeyDown={(event) => handleKeyDown(event, close)} style={{color: "#224289", cursor: "pointer", marginTop: 5, padding: 5, display: "inline-block"}}>&times; {text.close[language]}</a></span> 
+          <span><a href={activeImage} download style={{textDecoration: "none", color: "#224289", float: "right", marginTop: 5, padding: 5, display: "inline-block"}}>&darr; {text.download[language]}</a></span>
         </p>
       </div>
     </Dialog>
@@ -183,8 +248,8 @@ const Gallery = ({ data }) => {
         {activeVideo ? <Video src={embedUrl} title={activeVideoTitle} /> : ''}
         <p>{activeVideoTitle}</p>
         <p>
-          <span><a role="button" tabIndex="0" onClick={() => setShowVideo(false)} onKeyDown={(event) => handleKeyDown(event, () =>setShowVideo(false))} style={{color: "#224289", cursor: "pointer", marginTop: 5, padding: 5, display: "inline-block"}}>&times; close</a></span> 
-          <span><a href={activeVideo} download style={{textDecoration: "none", color: "#224289", float: "right", marginTop: 5, padding: 5, display: "inline-block"}}>&darr; download</a></span>
+          <span><a role="button" tabIndex="0" onClick={() => setShowVideo(false)} onKeyDown={(event) => handleKeyDown(event, () =>setShowVideo(false))} style={{color: "#224289", cursor: "pointer", marginTop: 5, padding: 5, display: "inline-block"}}>&times; {text.close[language]}</a></span> 
+          <span><a href={activeVideo} download style={{textDecoration: "none", color: "#224289", float: "right", marginTop: 5, padding: 5, display: "inline-block"}}>&darr; {text.download[language]}</a></span>
         </p>
       </div>
     </Dialog>

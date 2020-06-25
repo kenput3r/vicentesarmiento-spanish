@@ -7,6 +7,8 @@ import Img from "gatsby-image"
 import Layout from "../../components/layout"
 import PageHeader from "../../components/PageHeader"
 import SEO from "../../components/seo"
+import language from "../../components/language"
+import platformText from "../../components/platformText"
 
 const Container = styled.div`
   position: relative;
@@ -179,15 +181,18 @@ const Page = () => {
       }
     }
   `)
+  const text = {
+    ...platformText.affordableHousing
+  }
   return(
     <Layout>
       <PageHeader />
-      <SEO title="Affordable Housing In Santa Ana" />
+      <SEO title={text.label[language]} />
       <Container>
         <HeroContainer>
           <HeadingContainer>
             <H1 className="page-title">
-              Providing Affordable Housing In Santa Ana
+              {text.label[language]}
             </H1>
           </HeadingContainer>
           <Img fluid={Images.heroImage.childImageSharp.fluid} alt="Aerial view of Santa Ana" />
@@ -197,7 +202,7 @@ const Page = () => {
             <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
               <Img fluid={Images.affordableHousing_op0.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
             </div>
-            <h2 style={{textAlign: "center"}}>Working families deserve a safe, stable, and affordable place to live.</h2>
+            <h2 style={{textAlign: "center"}}>{text.excerpt[language]}</h2>
           </Wrapper>
           <Table className="yellow slanted sltr">
             <TableCell>
@@ -205,14 +210,14 @@ const Page = () => {
             </TableCell>
             <TableCell>
               <H3>
-                Build workforce and family housing with partners at Santa Ana College, SAUSD, and local Churches.
+                {text.bullets[0][language]}
               </H3>
             </TableCell>
           </Table>
           <Table>
             <TableCell>
               <H3>
-                Establish ‘missing middle’ development standards that balance the scale of new projects with the surrounding neighborhoods.
+                {text.bullets[1][language]}
               </H3>
             </TableCell>
             <TableCell>
@@ -225,14 +230,14 @@ const Page = () => {
             </TableCell>
             <TableCell>
               <H3>
-                Defend the Housing Opportunity Ordinance to ensure that new development includes affordable housing units. 
+                {text.bullets[2][language]}
               </H3>
             </TableCell>
           </Table>
           <Table>
             <TableCell>
               <H3>
-                Support efforts to pass a rent-stabilization ordinance. 
+                {text.bullets[3][language]} 
               </H3>
             </TableCell>
             <TableCell>

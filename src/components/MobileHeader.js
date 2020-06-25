@@ -1,7 +1,6 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-
+import language from "./language"
 import MobileLogo from "./MobileLogo"
 
 const Container = styled.nav`
@@ -93,16 +92,6 @@ div {
 `
 
 const MobileHeader = ({drawerOpen, setDrawerOpen}) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          language
-        }
-      }
-    }
-  `)
-  const language = data.site.siteMetadata.language || `english`
   const text = {
     donate: {
       english: `Donate`,

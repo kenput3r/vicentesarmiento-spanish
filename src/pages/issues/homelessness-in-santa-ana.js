@@ -7,6 +7,8 @@ import Img from "gatsby-image"
 import Layout from "../../components/layout"
 import PageHeader from "../../components/PageHeader"
 import SEO from "../../components/seo"
+import language from "../../components/language"
+import platformText from "../../components/platformText"
 
 const Container = styled.div`
   position: relative;
@@ -179,15 +181,18 @@ const Page = () => {
       }
     }
   `)
+  const text = {
+    ...platformText.reducingHomelessness
+  }
   return(
     <Layout>
       <PageHeader />
-      <SEO title="Reducing Homelessness In Santa Ana" />
+      <SEO title={text.label[language]} />
       <Container>
         <HeroContainer>
           <HeadingContainer>
             <H1 className="page-title">
-              Reduce Homelessness In Santa Ana
+              {text.label[language]}
             </H1>
           </HeadingContainer>
           <Img fluid={Images.heroImage.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
@@ -197,7 +202,7 @@ const Page = () => {
             <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
               <Img fluid={Images.reducingHomelessness_op0.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
             </div>
-            <h2 style={{textAlign: "center"}}>Our community must come together to combat the disproportionate impacts of the homelessness crisis.</h2>
+            <h2 style={{textAlign: "center"}}>{text.excerpt[language]}</h2>
           </Wrapper>
           <Table className="yellow slanted sltr">
             <TableCell>
@@ -205,14 +210,14 @@ const Page = () => {
             </TableCell>
             <TableCell>
               <H3>
-                Take legal action to revise the County’s jail release procedures and to ensure that homeless support services are equitably distributed across the County.
+                {text.bullets[0][language]}
               </H3>
             </TableCell>
           </Table>
           <Table>
             <TableCell>
               <H3>
-                Work with the business community, educational institutions, and community organizations to provide work placement services for homelessness resulting from lost jobs. 
+                {text.bullets[1][language]} 
               </H3>
             </TableCell>
             <TableCell>
@@ -225,14 +230,14 @@ const Page = () => {
             </TableCell>
             <TableCell>
               <H3>
-                Push the State and County to reopen the Fairview Development Center as a permanent supportive housing option for mentally ill homeless individuals.
+                {text.bullets[2][language]}
               </H3>
             </TableCell>
           </Table>
           <Table>
             <TableCell>
               <H3>
-                Refuse to expand local shelters until the County builds proportionate shelter space in the ‘South Service Planning Area.’
+                {text.bullets[3][language]}
               </H3>
             </TableCell>
             <TableCell>

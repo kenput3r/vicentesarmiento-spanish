@@ -1,13 +1,15 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Facebook from "./facebook"
 import Twitter from "./twitter"
 import YouTube from "./youtube"
 import Instagram from "./instagram"
 import Email from "./email"
+import language from "./language"
 import navigationText from "./navigationText"
+import platformText from "./platformText"
 
 const Container = styled.footer`
   border-top: 1px solid #ccc;
@@ -140,7 +142,7 @@ const Disclaimers = styled.div`
 `
 
 
-const postContact = async (event, email, phone, callBack) => {
+const postContact = async (event, email, phone, callBack, thanks, submit) => {
   event.preventDefault()
   const body = {email: email, phone: phone}
   if(email !== '' || phone !== '') {
@@ -151,9 +153,9 @@ const postContact = async (event, email, phone, callBack) => {
       })
       if(!response.error) {
         console.log('no errors')
-        callBack('THANKS!')
+        callBack(`${thanks}!`)
         setTimeout(() => {
-          callBack('JOIN US')
+          callBack(submit)
         }, 3000)
       }else{
         console.log(response.error)
@@ -166,33 +168,62 @@ const postContact = async (event, email, phone, callBack) => {
 
 
 const Footer = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          language
-        }
-      }
-    }
-  `)
-  const language = data.site.siteMetadata.language || `english`
   const text = {
     ...navigationText,
-    affordableHousing: {
-      english: 'Affordable Housing',
-      spanish: 'Vivienda Asequible'
+    ...platformText,
+    email: {
+      english: `Email Address`,
+      spanish: `Correo Electrónico`
+    },
+    phone: {
+      english: `Phone Number`,
+      spanish: `Número De Teléfono`
+    },
+    submit: {
+      english: `Join Us`,
+      spanish: `Enviar`
+    },
+    thanks: {
+      english: `Thanks`,
+      spanish: `Gracias`
+    },
+    disclaimers: {
+      paidForBy: {
+        english: `Paid for by Sarmiento for Mayor 2020 #1425828`,
+        spanish: ``
+      },
+      supportTheCampaign: {
+        english: `Support our mayoral campaign to elect Vicente Sarmiento by signing up to`,
+        spanish: ``
+      },
+      volunteer: {
+        english: `volunteer`,
+        spanish: ``
+      },
+      make: {
+        english: `or by making a`,
+        spanish: ``,
+      },
+      donationOnline: {
+        english: `donation online`,
+        spanish: ``
+      },
+      rightsReserved: {
+        english: `All rights reserved.`,
+        spanish: ``
+      }
     }
   }
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
-  const [submitText, setSubmitText] = useState('JOIN US')
+  const [submitText, setSubmitText] = useState(text.submit[language])
   return (
     <Container>
       <Left>
         <Form>
           <FieldSet>
             <div className="label">
-              <label>Email Address</label>
+              <label>{text.email[language]}</label>
             </div>
             <div className="input">
               <input type="email" onChange={e => setEmail(e.target.value)} />
@@ -200,11 +231,11 @@ const Footer = () => {
           </FieldSet>
           <FieldSet>
             <div className="label">
-              <label>Phone Number</label>
+              <label>{text.phone[language]}</label>
             </div>
             <div className="input">
               <input type="tel" onChange={e => setPhone(e.target.value)} />
-              <input type="submit" value={submitText} onClick={e => postContact(e, email, phone, setSubmitText)} />
+              <input type="submit" value={submitText} onClick={e => postContact(e, email, phone, setSubmitText, text.thanks[language], text.submit[language])} />
             </div>
           </FieldSet>
         </Form>
@@ -219,11 +250,11 @@ const Footer = () => {
           </div>
           <div>
             <List>
-              <li><Link to="/issues/affordable-housing-in-santa-ana/">Affordable Housing</Link></li>
-              <li><Link to="/issues/homelessness-in-santa-ana/">Reducing Homelessness</Link></li>
-              <li><Link to="/issues/investing-in-santa-ana-youth/">Invest In Youth</Link></li>
-              <li><Link to="/issues/public-health/">Public Health</Link></li>
-              <li><Link to="/issues/safer-neighborhoods-in-santa-ana/">Safer Neighborhoods</Link></li>
+              <li><Link to="/issues/affordable-housing-in-santa-ana/">{text.affordableHousing.label[language]}</Link></li>
+              <li><Link to="/issues/homelessness-in-santa-ana/">{text.reducingHomelessness.label[language]}</Link></li>
+              <li><Link to="/issues/investing-in-santa-ana-youth/">{text.investmentInYouth.label[language]}</Link></li>
+              <li><Link to="/issues/public-health/">{text.publicHealth.label[language]}</Link></li>
+              <li><Link to="/issues/safer-neighborhoods-in-santa-ana/">{text.saferNeighborhoods.label[language]}</Link></li>
             </List>
           </div>
         </Links>
@@ -247,9 +278,9 @@ const Footer = () => {
           </a>
         </Social>
         <Disclaimers>
-          <p><span>Paid for by Sarmiento for Mayor 2020 #1425828</span></p>
-          <p>Support our mayoral campaign to elect Vicente Sarmiento by signing up to <Link to="/contact/">volunteer</Link> or by making a <a href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">donation online</a>.</p>
-          <p>&copy; 2020. All rights reserved. </p>
+          <p><span>{text.disclaimers.paidForBy[language]}</span></p>
+          <p>{text.disclaimers.supportTheCampaign[language]} <Link to="/contact/">{text.disclaimers.volunteer[language]}</Link> {text.disclaimers.make[language]} <a href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">{text.disclaimers.donationOnline[language]}</a>.</p>
+          <p>&copy; 2020. {text.disclaimers.rightsReserved[language]} </p>
         </Disclaimers>
       </Right>
     </Container>

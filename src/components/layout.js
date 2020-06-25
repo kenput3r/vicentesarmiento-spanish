@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 
 import "./layout.css"
 import Footer from "./footer"
+import LanguageToggle from "./LanguageToggle"
 
 const Layout = ({ children }) => {
   return (
@@ -22,6 +23,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <Footer />
+        <LanguageToggle />
       </div>
     </>
   )

@@ -7,6 +7,8 @@ import Img from "gatsby-image"
 import Layout from "../../components/layout"
 import PageHeader from "../../components/PageHeader"
 import SEO from "../../components/seo"
+import language from "../../components/language"
+import platformText from "../../components/platformText"
 
 const Container = styled.div`
   position: relative;
@@ -179,15 +181,18 @@ const Page = () => {
       }
     }
   `)
+  const text = {
+    ...platformText.saferNeighborhoods
+  }
   return(
     <Layout>
       <PageHeader />
-      <SEO title="Safer Neighborhoods In Santa Ana" />
+      <SEO title={text.label[language]} />
       <Container>
         <HeroContainer>
           <HeadingContainer>
             <H1 className="page-title">
-              Safer Neighborhoods In Santa Ana
+              {text.label[language]}
             </H1>
           </HeadingContainer>
           <Img fluid={Images.heroImage.childImageSharp.fluid} alt="Downtown Santa Ana, 4th Street" />
@@ -197,7 +202,7 @@ const Page = () => {
             <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
               <Img fluid={Images.saferNeighborhoods_op0.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
             </div>
-            <h2 style={{textAlign: "center"}}>Our City should be smart on crime by efficiently using tax dollars to reach crime reduction goals. </h2>
+            <h2 style={{textAlign: "center"}}>{text.excerpt[language]}</h2>
           </Wrapper>
           <Table className="yellow slanted sltr">
             <TableCell>
@@ -205,14 +210,14 @@ const Page = () => {
             </TableCell>
             <TableCell>
               <H3>
-                Develop response procedures that deploy specialized civilian responders for routine field reports, situations involving mental illness, and homelessness.
+                {text.bullets[0][language]}
               </H3>
             </TableCell>
           </Table>
           <Table>
             <TableCell>
               <H3>
-                Create a public safety oversight board for community input and review of public safety operations.
+                {text.bullets[1][language]}
               </H3>
             </TableCell>
             <TableCell>
@@ -225,14 +230,14 @@ const Page = () => {
             </TableCell>
             <TableCell>
               <H3>
-                Work with outside agencies to guide people with substance disorders into treatment and rehabilitation programs. 
+                {text.bullets[2][language]} 
               </H3>
             </TableCell>
           </Table>
           <Table>
             <TableCell>
               <H3>
-                Focus on cost-saving preventative services in high risk neighborhoods and populations. 
+                {text.bullets[3][language]}
               </H3>
             </TableCell>
             <TableCell>

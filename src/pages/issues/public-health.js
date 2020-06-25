@@ -7,6 +7,8 @@ import Img from "gatsby-image"
 import Layout from "../../components/layout"
 import PageHeader from "../../components/PageHeader"
 import SEO from "../../components/seo"
+import language from "../../components/language"
+import platformText from "../../components/platformText"
 
 const Container = styled.div`
   position: relative;
@@ -179,15 +181,18 @@ const Page = () => {
       }
     }
   `)
+  const text = {
+    ...platformText.publicHealth
+  }
   return(
     <Layout>
       <PageHeader />
-      <SEO title="Public Health In Santa Ana" />
+      <SEO title={text.label[language]} />
       <Container>
         <HeroContainer>
           <HeadingContainer>
             <H1 className="page-title">
-              Public Health In Santa Ana
+              {text.label[language]}
             </H1>
           </HeadingContainer>
           <Img fluid={Images.heroImage.childImageSharp.fluid} alt="People congregating in Downtown Santa Ana" />
@@ -197,7 +202,7 @@ const Page = () => {
             <div style={{textAlign: "center", maxWidth: 300, margin:"30px auto"}}>
               <Img fluid={Images.educationFirst_op0.childImageSharp.fluid} alt="Vicente Samrmiento and team working a food bank" />
             </div>
-            <h2 style={{textAlign: "center"}}>We must work together to create a vibrant, safe, and healthy environment for all of our residents.</h2>
+            <h2 style={{textAlign: "center"}}>{text.excerpt[language]}</h2>
           </Wrapper>
           <Table className="yellow slanted sltr">
             <TableCell>
@@ -205,14 +210,14 @@ const Page = () => {
             </TableCell>
             <TableCell>
               <H3>
-                Partner with County agencies to provide affordable access to health insurance, mental health support services, and substance abuse treatment.
+                {text.bullets[0][language]}
               </H3>
             </TableCell>
           </Table>
           <Table>
             <TableCell>
               <H3>
-                Create complete neighborhoods with healthy food options, park space, community gardens, safer street designs, and active transportation options.
+                {text.bullets[1][language]}
               </H3>
             </TableCell>
             <TableCell>
@@ -225,14 +230,14 @@ const Page = () => {
             </TableCell>
             <TableCell>
               <H3>
-                Work with community partners to promote preventative treatments such as stress reduction programs, exercise opportunities, and early detection. 
+                {text.bullets[2][language]}
               </H3>
             </TableCell>
           </Table>
           <Table>
             <TableCell>
               <H3>
-                Ensure that our community has free and reliable access to COVID-19 testing.
+                {text.bullets[3][language]}
               </H3>
             </TableCell>
             <TableCell>
