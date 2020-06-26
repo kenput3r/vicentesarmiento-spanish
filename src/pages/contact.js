@@ -270,6 +270,10 @@ const text = {
     english: `learn how you can make a difference`,
     spanish: `aprende cómo puedes hacer la diferencia`
   },
+  h2: {
+    english: `Send a message`,
+    spanish: `Enviar un mensaje`
+  },
   firstName: {
     english: `* First Name`,
     spanish: `* Primer Nombre`
@@ -354,7 +358,7 @@ const Contact = () => {
         <Table>
           <Row>
             <Cell>
-              <h2 style={{maxWidth: 420, margin:"0 auto"}}>Send a message</h2>
+              <h2 style={{maxWidth: 420, margin:"0 auto"}}>{text.h2[language]}</h2>
               <Form name="contact" id="ContactForm" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <Input name="fName" required type="text" placeholder={text.firstName[language]} onChange={event => setFname(event.target.value)} />
@@ -378,7 +382,7 @@ const Contact = () => {
                     <small>{text.makeDonation[language]}</small>
                   </Label>
                 </CheckBoxes>
-                <TextArea name="message" placeholder="Message"></TextArea>
+                <TextArea name="message" placeholder={text.message[language]}></TextArea>
                 <Label>
                   <input type="checkbox" defaultChecked={sendNewsletter} onChange={() => setSendNewsletter(!sendNewsletter)} />
                   <span></span>
