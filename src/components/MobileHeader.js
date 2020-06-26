@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
+import language from "./language"
 import MobileLogo from "./MobileLogo"
 
 const Container = styled.nav`
@@ -92,13 +92,19 @@ div {
 `
 
 const MobileHeader = ({drawerOpen, setDrawerOpen}) => {
+  const text = {
+    donate: {
+      english: `Donate`,
+      spanish: `Donacion`
+    }
+  }
   return(
     <Container role="navigation">
       <LogoContainer>
         <MobileLogo />
       </LogoContainer>
       <DonateContainer>
-        <DonateButton href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">DONATE</DonateButton>
+        <DonateButton href="https://www.efundraisingconnections.com/c/VicenteSarmiento/">{text.donate[language]}</DonateButton>
       </DonateContainer>
       <BurgerContainer>
         <Burger drawerOpen={drawerOpen} onClick={() => setDrawerOpen(!drawerOpen)}>

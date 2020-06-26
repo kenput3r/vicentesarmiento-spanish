@@ -7,7 +7,7 @@ const YouTube = () => {
     query {
       youtube: file(relativePath: { eq: "icon-youtube_small.png" }) {
         childImageSharp {
-          fixed(height: 25) {
+          fixed(height: 30) {
             ...GatsbyImageSharpFixed
           }
         }

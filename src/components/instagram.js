@@ -18,7 +18,7 @@ const Instagram = () => {
     query {
       instagram: file(relativePath: { eq: "instagram.png" }) {
         childImageSharp {
-          fixed(height: 20) {
+          fixed(height: 30) {
             ...GatsbyImageSharpFixed
           }
         }

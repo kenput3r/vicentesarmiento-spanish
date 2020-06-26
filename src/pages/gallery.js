@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import PageHeader from "../components/PageHeader"
 import SEO from "../components/seo"
 import Video from "../components/video"
+import language from "../components/language"
 
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -43,13 +44,55 @@ const video5 = "https://drive.google.com/uc?export=download&id=1GyTFQwCvCwMZ_MDT
 const video6 = "https://drive.google.com/uc?export=download&id=12D2XcT37yipBLsQrQ5rPwYyJQrOY1UhJ"
 
 const videos = [
-  {download: video1, embed: "https://www.youtube.com/embed/031kkVNVm5Y", title: "Vicente Sarmiento Announces Santa Ana Mayoral Campaign"},
-  {download: video2, embed: "https://www.youtube.com/embed/Riu2-ytGg5c", title: "Update: California Moratorium on Evictions and Foreclosures 4/1/20"},
-  {download: video3, embed: "https://www.youtube.com/embed/_e5dMzqlrfw", title: "Sarmiento Health Message - English"},
-  {download: video4, embed: "https://www.youtube.com/embed/BhFNnes2t20", title: "Sarmiento Health Message - Spanish"},
-  {download: video5, embed: "https://www.youtube.com/embed/5Ni2wrR3vUw", title: "Sarmiento Water District Health Message - English"},
+  {
+    download: video1, 
+    embed: "https://www.youtube.com/embed/031kkVNVm5Y", 
+    title: {
+      english: "Vicente Sarmiento Announces Santa Ana Mayoral Campaign",
+      spanish: ``
+    }
+  },
+  {
+    download: video2, 
+    embed: "https://www.youtube.com/embed/Riu2-ytGg5c", 
+    title: {
+      english: "Update: California Moratorium on Evictions and Foreclosures 4/1/20",
+      spanish: ``
+    }
+  },
+  {
+    download: video3, 
+    embed: "https://www.youtube.com/embed/_e5dMzqlrfw", 
+    title: {
+      english: "Sarmiento Health Message - English",
+      spanish: ``
+    }
+  },
+  {
+    download: video4, 
+    embed: "https://www.youtube.com/embed/BhFNnes2t20", 
+    title: {
+      english: "Sarmiento Health Message - Spanish",
+      spanish: ``
+    }
+  },
+  {
+    download: video5, 
+    embed: "https://www.youtube.com/embed/5Ni2wrR3vUw", 
+    title: {
+      english: "Sarmiento Water District Health Message - English",
+      spanish: ``
+    }
+  },
 
-  {download: video6, embed: "https://www.youtube.com/embed/ULfPC5iR5IQ", title: "Sarmiento Water District Health Message - Spanish"}
+  {
+    download: video6, 
+    embed: "https://www.youtube.com/embed/ULfPC5iR5IQ", 
+    title: {
+      english: "Sarmiento Water District Health Message - Spanish",
+      spanish: ``
+    }
+  }
 ]
 
 const Container = styled.div`
@@ -72,10 +115,10 @@ const Container = styled.div`
 const Wrapper = styled.div`
   text-align: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid #cccccc;
   max-width: 1040px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 `
 const H2 = styled.h2`
   padding-top: 0;
@@ -86,29 +129,28 @@ const H2 = styled.h2`
 
 const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16,image17, image18, image19, image20, image21, image22]
 const image_alts = []
-image_alts[0] = ("Vicente Sarmiento")
-image_alts[1] = ("Vicente Sarmiento")
-image_alts[2] = ("Vicente Sarmiento")
-image_alts[3] = ("Vicente Sarmiento")
-image_alts[4] = ("Vicente Sarmiento")
-image_alts[5] = ("Vicente Sarmiento")
-image_alts[6] = ("Vicente Sarmiento")
-image_alts[7] = ("Vicente Sarmiento")
-image_alts[8] = ("Vicente Sarmiento")
-image_alts[9] = ("Vicente Sarmiento")
-image_alts[10] = ("Vicente Sarmiento")
-image_alts[11] = ("Vicente Sarmiento")
-image_alts[12] = ("Vicente Sarmiento")
-image_alts[13] = ("Vicente Sarmiento")
-image_alts[14] = ("Vicente Sarmiento")
-image_alts[15] = ("Vicente Sarmiento")
-image_alts[16] = ("Vicente Sarmiento")
-image_alts[17] = ("Vicente Sarmiento")
-image_alts[18] = ("Vicente Sarmiento")
-image_alts[19] = ("Vicente Sarmiento")
-image_alts[20] = ("Vicente Sarmiento")
-image_alts[21] = ("Vicente Sarmiento")
-image_alts[22] = ("Vicente Sarmiento")
+image_alts[0] = ("Vicente Sarmiento standing by a ballot drop box")
+image_alts[1] = ("Vicente Sarmiento standing with his arms crossed")
+image_alts[2] = ("Vicente Sarmiento near a wall with a plaque reading Santa Ana")
+image_alts[3] = ("Vicente Sarmiento standing against a wall covered in art")
+image_alts[4] = ("Vicente Sarmiento touring a factory")
+image_alts[5] = ("Vicente Sarmiento visiting a local business")
+image_alts[6] = ("Vicente Sarmiento with his family")
+image_alts[7] = ("Vicente Sarmiento with his family looking at a computer")
+image_alts[8] = ("Vicente Sarmiento with has family and family dog")
+image_alts[9] = ("Vicente Sarmiento at his desk")
+image_alts[10] = ("Vicente Sarmiento with friends in downtown Santa Ana")
+image_alts[11] = ("Vicente Sarmiento at the Santa Sna train station entrance")
+image_alts[12] = ("Vicente Sarmiento at the Santa Ana train station near the boarding area")
+image_alts[13] = ("Close up photograph of Vicente Sarmiento")
+image_alts[14] = ("Close up photograph of Vicente Sarmiento holding his chin")
+image_alts[15] = ("Close up photograph of Vicente Sarmiento holding his suit jacket")
+image_alts[16] = ("Close up photograph of Vicente Sarmiento at the Santa Ana train station near the boarding area")
+image_alts[17] = ("Vicente Sarmiento at a food drive")
+image_alts[18] = ("Vicente Sarmiento at the Delhi Center")
+image_alts[19] = ("Vicente Sarmiento with firefighters")
+image_alts[20] = ("Vicente Sarmiento Santa Ana Police")
+image_alts[21] = ("Vicente Sarmiento sitting at his desk")
 
 const Gallery = ({ data }) => {
   const [showDialog, setShowDialog] = useState(false)
@@ -139,26 +181,48 @@ const Gallery = ({ data }) => {
       callback()
     }
   }
+  const text = {
+    h1: {
+      english: `Media`,
+      spanish: `Fotos Y Videos`
+    },
+    videos: {
+      english: `Videos`,
+      spanish: `Videos`
+    },
+    photos: {
+      english: `Photos`,
+      spanish: `Fotos`
+    },
+    download: {
+      english: `download`,
+      spanish: `descargar`
+    },
+    close: {
+      english: `close`,
+      spanish: `salida`
+    }
+  }
   return (
-  <Layout>
+  <Layout location="/gallery">
     <PageHeader />
     <SEO title="Downloadable Media With Vicente Sarmiento" />
     <Container className="content">
-      <h1 className="page-title">Media</h1>
+      <h1 className="page-title">{text.h1[language]}</h1>
       <Wrapper>
         <div style={{textAlign: "left", width: "100%"}}>
-          <H2>Videos</H2>
+          <H2>{text.videos[language]}</H2>
         </div>
         {videos.map((video, index) => (
           <div className="gallery-image video" key={`video`+index}>
-            <a role="button" tabIndex="0" key={`thumb-${index}`} onClick={() => openVideo(video.embed, video.download, video.title)} onKeyDown={(event) => handleKeyDown(event, () =>openVideo(video.embed, video.download, video.title))}>
+            <a role="button" tabIndex="0" key={`thumb-${index}`} onClick={() => openVideo(video.embed, video.download, video.title[language])} onKeyDown={(event) => handleKeyDown(event, () =>openVideo(video.embed, video.download, video.title[language]))}>
                 <Img fluid={data[`video${index+1}`].childImageSharp.fluid} alt={image_alts[index]} />
             </a>
-          <p style={{textAlign: "left", padding: "1.5%"}}>{video.title}</p>
+          <p style={{textAlign: "left", padding: "1.5%"}}>{video.title[language]}</p>
           </div>
         ))}
         <div style={{textAlign: "left", marginTop: 20, width: "100%"}}>
-          <H2>Photos</H2>
+          <H2>{text.photos[language]}</H2>
         </div>
         {images.map((image, index) => (
             <div className="gallery-image" key={`thumb-${index}`}>
@@ -173,8 +237,8 @@ const Gallery = ({ data }) => {
       <div>
         {activeImage ? <Img fluid={data[`img${activeImageIndex+1}b`].childImageSharp.fluid} alt={image_alts[activeImageIndex]} /> : ''}
         <p>
-          <span><a role="button" tabIndex="0" onClick={close} onKeyDown={(event) => handleKeyDown(event, close)} style={{color: "#224289", cursor: "pointer"}}>&times; close</a></span> 
-          <span><a href={activeImage} download style={{textDecoration: "none", color: "#224289", float: "right"}}>&darr; download</a></span>
+          <span><a role="button" tabIndex="0" onClick={close} onKeyDown={(event) => handleKeyDown(event, close)} style={{color: "#224289", cursor: "pointer", marginTop: 5, padding: 5, display: "inline-block"}}>&times; {text.close[language]}</a></span> 
+          <span><a href={activeImage} download style={{textDecoration: "none", color: "#224289", float: "right", marginTop: 5, padding: 5, display: "inline-block"}}>&darr; {text.download[language]}</a></span>
         </p>
       </div>
     </Dialog>
@@ -183,8 +247,8 @@ const Gallery = ({ data }) => {
         {activeVideo ? <Video src={embedUrl} title={activeVideoTitle} /> : ''}
         <p>{activeVideoTitle}</p>
         <p>
-          <span><a role="button" tabIndex="0" onClick={() => setShowVideo(false)} onKeyDown={(event) => handleKeyDown(event, () =>setShowVideo(false))} style={{color: "#224289", cursor: "pointer"}}>&times; close</a></span> 
-          <span><a href={activeVideo} download style={{textDecoration: "none", color: "#224289", float: "right"}}>&darr; download</a></span>
+          <span><a role="button" tabIndex="0" onClick={() => setShowVideo(false)} onKeyDown={(event) => handleKeyDown(event, () =>setShowVideo(false))} style={{color: "#224289", cursor: "pointer", marginTop: 5, padding: 5, display: "inline-block"}}>&times; {text.close[language]}</a></span> 
+          <span><a href={activeVideo} download style={{textDecoration: "none", color: "#224289", float: "right", marginTop: 5, padding: 5, display: "inline-block"}}>&darr; {text.download[language]}</a></span>
         </p>
       </div>
     </Dialog>

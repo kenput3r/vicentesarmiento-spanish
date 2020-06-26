@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import PageHeader from "../components/PageHeader"
 import SEO from "../components/seo"
+import language from "../components/language"
 
 const Container = styled.div`
   position: relative;
@@ -54,8 +55,7 @@ const H1 = styled.h1`
 `
 const Table = styled.div`
   display: table;
-  border-bottom: 1px solid #cccccc;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   max-width: 1040px;
 `
 const Row = styled.div`
@@ -137,24 +137,8 @@ const Input = styled.input`
     }
   }
 `
-const Select = styled.select`
-  color: rgb(34, 66, 137);
-  font-weight:500;
-  font-size: 18px;
-  border-radius: 5px;
-  line-height: 22px;
-  background-color: transparent;
-  border:2px solid rgb(34, 66, 137);
-  transition: all 0.3s;
-  padding: 13px;
-  margin-bottom: 15px;
-  width:100%;
-  box-sizing: border-box;
-  outline:0;
+const CheckBoxes = styled.div`
 
-  :focus {
-    border: 2px solid #f1c80f;
-  }
 `
 const TextArea = styled.textarea`
   height: 150px;
@@ -277,22 +261,92 @@ const postContact = async (event, email, fName, lName, phone, sendNewsletter) =>
   }
 }
 
+const text = {
+  h1: {
+    english: `Get Involved`,
+    spanish: `Involucrate`
+  },
+  h1_small: {
+    english: `learn how you can make a difference`,
+    spanish: `aprende cómo puedes hacer la diferencia`
+  },
+  firstName: {
+    english: `* First Name`,
+    spanish: `* Primer Nombre`
+  },
+  lastName: {
+    english: `* Last Name`,
+    spanish: `* Apellido`
+  },
+  phoneNumber: {
+    english: `Phone Number`,
+    spanish: `Número De Teléfono`
+  },
+  emailAddress: {
+    english: `* Email Address`,
+    spanish: `* Correo Electrónico`
+  },
+  sendYardSign: {
+    english: `Send me a yard sign`,
+    spanish: `Envíenme una letrero de yarda`
+  },
+  volunteer: {
+    english: `I would like to volunteer`,
+    spanish: `Me gustaría ser voluntario`
+  },
+  makeDonation: {
+    english: `I would like to make a donation`,
+    spanish: `Me gustaría hacer una donación`
+  },
+  receiveEmails: {
+    english: `sign me up to receive campaign update emails`,
+    spanish: `registrame para recibir correos electrónicos de actualizaciones de la campaña`
+  },
+  message: {
+    english: `Message`,
+    spanish: `Mensaje`
+  },
+  h3: {
+    english: `Other ways to get connected`,
+    spanish: `Otras formas de conectarse`
+  },
+  writeUs: {
+    english: `Write us at:`,
+    spanish: `Escríbenos a`
+  },
+  emailUs: {
+    english: `Email us at:`,
+    spanish: `Envíenos un email a`
+  },
+  followUs: {
+    english: `Follow us on:`,
+    spanish: `Siguenos`
+  },
+  submit: {
+    english: `SUBMIT`,
+    spanish: `ENVIAR`
+  }
+}
+
 const Contact = () => {
   const [email, setEmail] = useState('')
   const [fName, setFname] = useState('')
   const [lName, setLname] = useState('')
   const [phone, setPhone] = useState('')
   const [sendNewsletter, setSendNewsletter] = useState(true)
+  const [getYardSign, setGetYardSign] = useState(false)
+  const [volunteer, setVolunteer] = useState(false)
+  const [makeDonation, setMakeDonation] =useState(false)
   return (
-    <Layout>
+    <Layout location="/contact">
       <PageHeader />
       <SEO title="Contact Vicente Sarmiento" />
       <Container>
         <HeroContainer>
           <HeadingContainer>
             <H1 className="page-title">
-              Get Involved <br />
-              <small>learn how you can make a difference</small>
+              {text.h1[language]} <br />
+              <small>{text.h1_small[language]}</small>
             </H1>
           </HeadingContainer>
           <Hero />
@@ -303,51 +357,48 @@ const Contact = () => {
               <h2 style={{maxWidth: 420, margin:"0 auto"}}>Send a message</h2>
               <Form name="contact" id="ContactForm" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
-                <Input name="fName" required type="text" placeholder="* First Name" onChange={event => setFname(event.target.value)} />
-                <Input name="lName" required type="text" placeholder="* Last Name" onChange={event => setLname(event.target.value)} />
-                <Input name="email" required type="email" placeholder="* Email" onChange={event => setEmail(event.target.value)} />
-                <Input name="phone" type="tel" placeholder="Phone Number" onChange={event => setPhone(event.target.value)} />
-                <Select name="subject">
-                  <option default={true} disabled={true}>
-                    I would like to...
-                  </option>
-                  <option value="Learn more about Councilmember Sarmiento">
-                    Learn more about Councilmember Sarmiento
-                  </option>
-                  <option value="Volunteer">
-                    Volunteer
-                  </option>
-                  <option value="Get a yard sign">
-                    Get a yard sign
-                  </option>
-                  <option value="Make a donation">
-                    Make a donation
-                  </option>
-                  <option value="Be contacted by a campaign team member">
-                    Be contacted by a campaign team member
-                  </option>
-                </Select>
+                <Input name="fName" required type="text" placeholder={text.firstName[language]} onChange={event => setFname(event.target.value)} />
+                <Input name="lName" required type="text" placeholder={text.lastName[language]} onChange={event => setLname(event.target.value)} />
+                <Input name="email" required type="email" placeholder={text.emailAddress[language]} onChange={event => setEmail(event.target.value)} />
+                <Input name="phone" type="tel" placeholder={text.phoneNumber[language]} onChange={event => setPhone(event.target.value)} />
+                <CheckBoxes>
+                  <Label>
+                    <input type="checkbox" defaultChecked={getYardSign} onChange={() => setGetYardSign(!getYardSign)} value="Send me a yard sign" />
+                    <span></span>
+                    <small>{text.sendYardSign[language]}</small>
+                  </Label>
+                  <Label>
+                    <input type="checkbox" defaultChecked={volunteer} onChange={() => setVolunteer(!volunteer)} value="I would like to volunteer" />
+                    <span></span>
+                    <small>{text.volunteer[language]}</small>
+                  </Label>
+                  <Label>
+                    <input type="checkbox" defaultChecked={makeDonation} onChange={() => setMakeDonation(!makeDonation)} value="I would like to make a donation" />
+                    <span></span>
+                    <small>{text.makeDonation[language]}</small>
+                  </Label>
+                </CheckBoxes>
                 <TextArea name="message" placeholder="Message"></TextArea>
                 <Label>
                   <input type="checkbox" defaultChecked={sendNewsletter} onChange={() => setSendNewsletter(!sendNewsletter)} />
                   <span></span>
-                  <small>sign me up to receive campaign update emails</small>
+                  <small>{text.receiveEmails[language]}</small>
                 </Label>
-                <Input type="submit" value="SUBMIT" onClick={event => postContact(event, email, fName, lName, phone, sendNewsletter)} />
+                <Input type="submit" value={text.submit[language]} onClick={event => postContact(event, email, fName, lName, phone, sendNewsletter)} />
               </Form>
             </Cell>
             <Cell className="valign-center">
               <Data>
-                <h3>Other ways to get connected</h3>
-                <p><strong>Write us at:</strong> <br />
+                <h3>{text.h3[language]}</h3>
+                <p><strong>{text.writeUs[language]}</strong> <br />
                   Sarmiento for Mayor <br />
                   PO Box 10162 <br />
                   Santa Ana, CA 92711
                 </p>
                 <p>
-                  <strong>Email us at:</strong> <a href="mailto:info@sarmientoformayor.com">info@sarmientoformayor.com</a>
+                  <strong>{text.emailUs[language]}</strong> <a href="mailto:info@sarmientoformayor.com">info@sarmientoformayor.com</a>
                 </p>
-                <p><strong>Follow us on:</strong></p>
+                <p><strong>{text.followUs[language]}</strong></p>
                 <ul>
                   <li>Facebook <a href="https://facebook.com/sarmientoformayor">@sarmientoformayor</a></li>
                   <li>Instagram <a href="https://instagram.com/sarmientoformayor">@sarmientoformayor</a></li>

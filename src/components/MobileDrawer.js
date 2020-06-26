@@ -1,13 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import language from "./language"
+import navigationText from "./navigationText"
 
 const StyledMenu = styled.nav`
   display: none;
   flex-direction: column;
   justify-content: center;
   background: #224289;
-  height: 90vh;
+  height: 100vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -39,12 +41,15 @@ const StyledMenu = styled.nav`
 `;
 
 const MobileDrawer = ({drawerOpen}) => {
-
+  const text = {
+    ...navigationText
+  }
   return (
     <StyledMenu drawerOpen={drawerOpen}>
-      <Link to="/">HOME</Link>
-      <Link to="/contact/">CONTACT</Link>
-      <Link to="/gallery">Media</Link>
+      <Link to="/">{text.home[language]}</Link>
+      <Link to="/about/">{text.about[language]}</Link>
+      <Link to="/contact/">{text.contact[language]}</Link>
+      <Link to="/gallery">{text.media[language]}</Link>
     </StyledMenu>
   )
 }

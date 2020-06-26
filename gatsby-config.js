@@ -4,6 +4,7 @@ module.exports = {
     title: `Sarmiento for Mayor`,
     description: `Santa Ana City Council Member Vicente Sarmiento is running for Mayor of Santa Ana`,
     author: `@kenput3r`,
+    language: `english`
   },
   plugins: [
     `gatsby-plugin-styled-components`,
