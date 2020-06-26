@@ -67,19 +67,19 @@ export default {
     bullets: [
       {
         english: `Take legal action to revise the County’s jail release procedures and to ensure that homeless support services are equitably distributed across the County.`,
-        spansih: ``
+        spansih: `Tomar medidas legales para cambiar la póliza del Condado de liberación de individuos para garantizar que los servicios de apoyo para personas sin hogar se distribuyan de manera equitativa en todo el Condado.`
       },
       {
         english: `Work with the business community, educational institutions, and community organizations to provide work placement services for homelessness resulting from lost jobs.`,
-        spansih: ``
+        spansih: `Trabajar con la comunidad empresarial, las instituciones educativas y las organizaciones comunitarias para proporcionar servicios de colocación laboral para personas sin hogar como resultado de la pérdida de empleos.`
       },
       {
         english: `Push the State and County to reopen the Fairview Development Center as a permanent supportive housing option for mentally ill homeless individuals.`,
-        spansih: ``
+        spansih: `Presionar al Estado y al Condado para que reabran el Fairview Development Center como una opción de vivienda de apoyo permanente para personas sin hogar con enfermedades mentales.`
       },
       {
         english: `Refuse to expand local shelters until the County builds proportionate shelter space in the ‘South Service Planning Area.’`,
-        spansih: ``
+        spansih: `Negar expandir los refugios locales hasta que el Condado construya un espacio de refugio proporcional en el "Área de Planificación de Servicios del Sur".`
       }
     ]
   },
@@ -95,19 +95,19 @@ export default {
     bullets: [
       {
         english: `Develop response procedures that deploy specialized civilian responders for routine field reports, situations involving mental illness, and homelessness.`,
-        spansih: ``
+        spansih: `Desarrollar procedimientos de respuesta que desplieguen respuestas civiles especializadas para informes de rutina, situaciones que involucran enfermedades mentales y personas sin hogar.`
       },
       {
         english: `Create a public safety oversight board for community input and review of public safety operations.`,
-        spansih: ``
+        spansih: `Crear una junta de supervisión de seguridad pública para la opinión de la comunidad y la revisión de las operaciones de seguridad pública.`
       },
       {
         english: `Work with outside agencies to guide people with substance disorders into treatment and rehabilitation programs.`,
-        spansih: ``
+        spansih: `Trabajar con agencias externas para guiar a las personas con trastornos de sustancias a programas de tratamiento y rehabilitación.`
       },
       {
         english: `Focus on cost-saving preventative services in high risk neighborhoods and populations.`,
-        spansih: ``
+        spansih: `Enfocarnos en servicios preventivos que ahorren costos, en vecindarios y poblaciones de alto riesgo.`
       }
     ]
   },
@@ -123,19 +123,19 @@ export default {
     bullets: [
       {
         english: `Partner with County agencies to provide affordable access to health insurance, mental health support services, and substance abuse treatment.`,
-        spansih: ``
+        spansih: `Asociarnos con agencias del Condado para proporcionar acceso asequible a seguro de salud, servicios de apoyo de salud mental y tratamiento de abuso de sustancias.`
       },
       {
         english: `Create complete neighborhoods with healthy food options, park space, community gardens, safer street designs, and active transportation options.`,
-        spansih: ``
+        spansih: `Crear vecindarios completos con opciones de alimentos saludables, espacios para parques, jardines comunitarios, diseños de calles más seguras y opciones de transporte activo.`
       },
       {
         english: `Work with community partners to promote preventative treatments such as stress reduction programs, exercise opportunities, and early detection.`,
-        spansih: ``
+        spansih: `Trabajar con socios de la comunidad para promover tratamientos preventivos como programas de reducción de estrés, oportunidades de ejercicio y detección temprana.`
       },
       {
         english: `Ensure that our community has free and reliable access to COVID-19 testing.`,
-        spansih: ``
+        spansih: `Asegurar que nuestra comunidad tenga acceso gratuito y confiable a las pruebas del COVID-19.`
       }
     ]
   }

@@ -264,19 +264,19 @@ const postContact = async (event, email, fName, lName, phone, sendNewsletter) =>
 const text = {
   h1: {
     english: `Get Involved`,
-    spanish: ``
+    spanish: `Involucrate`
   },
   h1_small: {
     english: `learn how you can make a difference`,
-    spanish: ``
+    spanish: `aprende cómo puedes hacer la diferencia`
   },
   firstName: {
     english: `* First Name`,
-    spanish: ``
+    spanish: `* Primer Nombre`
   },
   lastName: {
     english: `* Last Name`,
-    spanish: ``
+    spanish: `* Apellido`
   },
   phoneNumber: {
     english: `Phone Number`,
@@ -288,39 +288,39 @@ const text = {
   },
   sendYardSign: {
     english: `Send me a yard sign`,
-    spanish: ``
+    spanish: `Envíenme una letrero de yarda`
   },
   volunteer: {
     english: `I would like to volunteer`,
-    spanish: ``
+    spanish: `Me gustaría ser voluntario`
   },
   makeDonation: {
     english: `I would like to make a donation`,
-    spanish: ``
+    spanish: `Me gustaría hacer una donación`
   },
   receiveEmails: {
     english: `sign me up to receive campaign update emails`,
-    spanish: ``
+    spanish: `registrame para recibir correos electrónicos de actualizaciones de la campaña`
   },
   message: {
     english: `Message`,
-    spanish: ``
+    spanish: `Mensaje`
   },
   h3: {
     english: `Other ways to get connected`,
-    spanish: ``
+    spanish: `Otras formas de conectarse`
   },
   writeUs: {
     english: `Write us at:`,
-    spanish: ``
+    spanish: `Escríbenos a`
   },
   emailUs: {
     english: `Email us at:`,
-    spanish: ``
+    spanish: `Envíenos un email a`
   },
   followUs: {
     english: `Follow us on:`,
-    spanish: ``
+    spanish: `Siguenos`
   },
   submit: {
     english: `SUBMIT`,
@@ -338,7 +338,7 @@ const Contact = () => {
   const [volunteer, setVolunteer] = useState(false)
   const [makeDonation, setMakeDonation] =useState(false)
   return (
-    <Layout>
+    <Layout location="/contact">
       <PageHeader />
       <SEO title="Contact Vicente Sarmiento" />
       <Container>

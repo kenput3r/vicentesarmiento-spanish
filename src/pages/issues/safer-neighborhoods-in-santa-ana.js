@@ -192,7 +192,7 @@ const Page = () => {
     ...platformText.saferNeighborhoods
   }
   return(
-    <Layout>
+    <Layout location="/issues/safer-neighborhoods-in-santa-ana/">
       <PageHeader />
       <SEO title={text.label[language]} />
       <Container>

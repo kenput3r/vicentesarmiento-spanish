@@ -209,6 +209,9 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
+a:hover {
+  cursor: pointer;
+}
 img {
   max-width: 100%;
   margin-left: 0;
@@ -713,6 +716,19 @@ footer .button {
 
 div#gdpr_text {
   display: none;
+}
+
+[data-reach-dialog-content] a {
+  border: 1px solid #f1c80f;
+}
+
+[data-reach-dialog-content] a:focus {
+  outline: none;
+  background-color: #f1c80f;
+}
+
+[data-reach-dialog-content] a:hover {
+  background-color: #f1c80f;
 }
 
 @media only screen and (max-width: 767px) {

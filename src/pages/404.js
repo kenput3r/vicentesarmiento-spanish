@@ -54,14 +54,14 @@ const NotFoundPage = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout location="/">
       <SEO title="404: Not found" />
       <PageHeader />
       <Container headerHeight={headerHeight}>
         <Table>
           <TableCell>
             <h1>404<br />NOT FOUND</h1>
-            <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+            <p>You just hit a page that doesn&#39;t exist... the sadness.</p>
           </TableCell>
           <TableCell className="image-wrapper" headerHeight={headerHeight}>
             <div className="image-wrapper">

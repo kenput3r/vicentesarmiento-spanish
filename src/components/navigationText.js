@@ -9,7 +9,7 @@ export default {
   },
   contact: {
     english: `Get Involved`,
-    spanish: ``
+    spanish: `Involucrate`
   },
   media: {
     english: `Media`,

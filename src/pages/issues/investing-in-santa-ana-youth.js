@@ -192,7 +192,7 @@ const Page = () => {
     ...platformText.investmentInYouth
   }
   return(
-    <Layout>
+    <Layout location="/issues/investing-in-santa-ana-youth/">
       <PageHeader />
       <SEO title={text.label[language]} />
       <Container>

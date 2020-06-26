@@ -25,12 +25,17 @@ const Container = styled.div`
     margin-left: initial;
     margin-right: -20px;
   }
+  a {
+    color: rgb(34, 66, 137);
+    text-decoration: none;
+  }
 `
 
-const LanguageToggle = () => {
+const LanguageToggle = ({ location }) => {
+  const site = language === 'english' ? 'https://es.sarmientoformayor.com' : 'https://www.sarmientoformayor.com'
   return (
     <Container>
-      {label}
+      <a href={site+location}>{label}</a>
     </Container>
   )
 }

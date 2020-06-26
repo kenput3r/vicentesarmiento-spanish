@@ -192,7 +192,7 @@ const Page = () => {
     ...platformText.publicHealth
   }
   return(
-    <Layout>
+    <Layout location="/issues/public-health/">
       <PageHeader />
       <SEO title={text.label[language]} />
       <Container>

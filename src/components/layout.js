@@ -11,7 +11,7 @@ const Main = styled.main`
     content: " ";
   }
 `
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   return (
     <>
       <div
@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
       >
         <Main>{children}</Main>
         <Footer />
-        <LanguageToggle />
+        <LanguageToggle location={location} />
       </div>
     </>
   )

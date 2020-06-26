@@ -10,10 +10,6 @@ const BoxedText = styled.div`
   font-size: 1.5rem;
   padding: 8px 0;
 `
-// const Form = styled.form`
-//   margin: 20px auto;
-// `
-
 const Form = styled.form`
   max-width: 100%;
   input {
@@ -153,7 +149,6 @@ const PopUpForm = () => {
   return (
     <Dialog isOpen={isOpen} initialFocusRef={initialRef} onDismiss={() => handleClose(setIsOpen)} aria-label="Email Sign Up Form">
       <p style={{textAlign: "right", marginBottom: 0}}>
-        <span tabIndex="0"></span>
         <a role="button" tabIndex="1" onClick={() => setIsOpen(false)} onKeyDown={(event) => handleKeyDown(event, () => handleClose(setIsOpen))}>&times;</a>
       </p>
       <BoxedText>
@@ -167,7 +162,7 @@ const PopUpForm = () => {
           {text.h5_small[language]}
         </Underlined>
       </p>
-      <Form>
+      <Form id="SubscribeForm">
         <FieldSet>
           <div className="label">
             <label>{text.email[language]}</label>
@@ -182,7 +177,7 @@ const PopUpForm = () => {
           </div>
           <div className="input">
             <input type="tel" onChange={e => setPhone(e.target.value)} />
-            <input type="submit" value={text.submit[language]} onClick={event => postContact(event, email, phone)} />
+            <input type="submit" value={text.submit[language]} onClick={event => postContact(event, email, phone, setIsOpen)} />
           </div>
         </FieldSet>
       </Form>

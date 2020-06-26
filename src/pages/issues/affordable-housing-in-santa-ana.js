@@ -192,7 +192,7 @@ const Page = () => {
     ...platformText.affordableHousing
   }
   return(
-    <Layout>
+    <Layout location="/issues/affordable-housing-in-santa-ana/">
       <PageHeader />
       <SEO title={text.label[language]} />
       <Container>

@@ -204,7 +204,7 @@ const Gallery = ({ data }) => {
     }
   }
   return (
-  <Layout>
+  <Layout location="/gallery">
     <PageHeader />
     <SEO title="Downloadable Media With Vicente Sarmiento" />
     <Container className="content">

@@ -192,7 +192,7 @@ const Page = () => {
     ...platformText.reducingHomelessness
   }
   return(
-    <Layout>
+    <Layout location="/issues/homelessness-in-santa-ana/">
       <PageHeader />
       <SEO title={text.label[language]} />
       <Container>

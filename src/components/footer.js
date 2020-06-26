@@ -190,27 +190,27 @@ const Footer = () => {
     disclaimers: {
       paidForBy: {
         english: `Paid for by Sarmiento for Mayor 2020 #1425828`,
-        spanish: ``
+        spanish: `Pagado por Sarmiento para el alcalde 2020 #1425828`
       },
       supportTheCampaign: {
         english: `Support our mayoral campaign to elect Vicente Sarmiento by signing up to`,
-        spanish: ``
+        spanish: `Apoye nuestra campaña para elegir a Vicente Sarmiento como alcalde registrándose como`
       },
       volunteer: {
         english: `volunteer`,
-        spanish: ``
+        spanish: `voluntario`
       },
       make: {
         english: `or by making a`,
-        spanish: ``,
+        spanish: `o haciendo una`,
       },
       donationOnline: {
         english: `donation online`,
-        spanish: ``
+        spanish: `donación en línea`
       },
       rightsReserved: {
         english: `All rights reserved.`,
-        spanish: ``
+        spanish: `Todos los derechos reservados.`
       }
     }
   }
