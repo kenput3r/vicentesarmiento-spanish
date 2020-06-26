@@ -367,17 +367,17 @@ const Contact = () => {
                 <Input name="phone" type="tel" placeholder={text.phoneNumber[language]} onChange={event => setPhone(event.target.value)} />
                 <CheckBoxes>
                   <Label>
-                    <input type="checkbox" defaultChecked={getYardSign} onChange={() => setGetYardSign(!getYardSign)} value="Send me a yard sign" />
+                    <input type="checkbox" defaultChecked={getYardSign} onChange={() => setGetYardSign(!getYardSign)} name="send_yard_sign" value="Send me a yard sign" />
                     <span></span>
                     <small>{text.sendYardSign[language]}</small>
                   </Label>
                   <Label>
-                    <input type="checkbox" defaultChecked={volunteer} onChange={() => setVolunteer(!volunteer)} value="I would like to volunteer" />
+                    <input type="checkbox" defaultChecked={volunteer} onChange={() => setVolunteer(!volunteer)} name="volunteer" value="I would like to volunteer" />
                     <span></span>
                     <small>{text.volunteer[language]}</small>
                   </Label>
                   <Label>
-                    <input type="checkbox" defaultChecked={makeDonation} onChange={() => setMakeDonation(!makeDonation)} value="I would like to make a donation" />
+                    <input type="checkbox" defaultChecked={makeDonation} onChange={() => setMakeDonation(!makeDonation)} name="make_donation" value="I would like to make a donation" />
                     <span></span>
                     <small>{text.makeDonation[language]}</small>
                   </Label>

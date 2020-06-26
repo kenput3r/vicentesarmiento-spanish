@@ -66,7 +66,7 @@ const text = {
   },
   h5_small: {
     english: `subscribe to our newsletter to stay in the loop`,
-    spanish: `suscríbete a nuestro boletín para mantenerte al tanto`
+    spanish: `suscríbete a nuestro boletín para mantenerte informado`
   },
   firstName: {
     english: `* First Name`,
