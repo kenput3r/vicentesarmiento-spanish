@@ -8,6 +8,7 @@ import Hero from "../components/hero"
 import Platform from "../components/platform"
 import Parallax from "../components/parallax"
 import PopUpForm from "../components/PopUpForm"
+import BlogFeed from "../components/BlogFeed"
 
 const HeroContainer = styled.div`
   @media (max-width: 767px) {
@@ -21,7 +22,8 @@ const HeroContainer = styled.div`
       background-attachment: scroll;
     }
 
-    :before, :after {
+    :before,
+    :after {
       background-attachment: fixed;
       @media (max-width: 1024px) {
         background-attachment: scroll;
@@ -40,6 +42,7 @@ const IndexPage = () => (
     <Platform />
     <Parallax />
     <Videos />
+    <BlogFeed />
     <PopUpForm />
   </Layout>
 )
