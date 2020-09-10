@@ -49,11 +49,11 @@ const video5 =
 const video6 =
   "https://drive.google.com/uc?export=download&id=12D2XcT37yipBLsQrQ5rPwYyJQrOY1UhJ"
 const video7 =
-  "https://drive.google.com/uc?export=download&id=1DNDfaqWaIVgyJxXdekG1s0jnNzWO6IRn"
+  "https://drive.google.com/uc?export=download&id=1DfIdZ4njo-38Qu83e_EHustY4EX7QpbU"
 const video8 =
-  "https://drive.google.com/uc?export=download&id=1Eyp0P2kn1Ykq35Y6Vmp_-YwKrdI6EK9o"
+  "https://drive.google.com/uc?export=download&id=1V0IsfXmeJhcTpcEOAfp5x4K0eygAv49j"
 const video9 =
-  "https://drive.google.com/uc?export=download&id=1RBmgLRuAgBaH1Y4_tonDQph9n5-9fpN2"
+  "https://drive.google.com/uc?export=download&id=1C94JTfQIWPvIT4463N8GLMI_Ork_1sSZ"
 
 const videos = [
   {
@@ -107,26 +107,26 @@ const videos = [
   },
   {
     download: video7,
-    embed: "https://www.youtube.com/embed/gy5e6uUDi5o",
+    embed: "https://www.youtube.com/embed/yTPasfcY3lQ",
     title: {
-      english: "Investing In Santa Ana's Youth",
-      spanish: ``,
+      english: "Invirtiendo en la juventud de Santa Ana",
+      spanish: "Invirtiendo en la juventud de Santa Ana",
     },
   },
   {
     download: video8,
-    embed: "https://www.youtube.com/embed/BCNOhP9wzAU",
+    embed: "https://www.youtube.com/embed/pozSR5jjL3w",
     title: {
-      english: "Reducing Homelessness In Santa Ana",
-      spanish: ``,
+      english: "Reducer la falta de vivienda en Santa Ana",
+      spanish: "Reducer la falta de vivienda en Santa Ana",
     },
   },
   {
     download: video9,
-    embed: "https://www.youtube.com/embed/047rUUQEy08",
+    embed: "https://www.youtube.com/embed/hYxtFIitWJE",
     title: {
-      english: "Safer Neighborhoods In Santa Ana",
-      spanish: ``,
+      english: "Barrios más seguros en Santa Ana",
+      spanish: "Barrios más seguros en Santa Ana",
     },
   },
 ]
