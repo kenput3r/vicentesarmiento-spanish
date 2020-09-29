@@ -54,6 +54,12 @@ const video8 =
   "https://drive.google.com/uc?export=download&id=1V0IsfXmeJhcTpcEOAfp5x4K0eygAv49j"
 const video9 =
   "https://drive.google.com/uc?export=download&id=1C94JTfQIWPvIT4463N8GLMI_Ork_1sSZ"
+const video10 =
+  "https://drive.google.com/uc?export=download&id=1zip3ipFqs0paHEJXl-eXLcHc6Rgl5iwo"
+const video11 =
+  "https://drive.google.com/uc?export=download&id=1XvDdr71KZ8aUp43aYzjYh2ggMr9XKAXx"
+const video12 =
+  "https://drive.google.com/uc?export=download&id=1Quck3Q9YM4VyWE8GmIo8irFJhoMJxjsH"
 
 const videos = [
   {
@@ -129,6 +135,30 @@ const videos = [
       spanish: "Barrios más seguros en Santa Ana",
     },
   },
+  {
+    download: video10,
+    embed: "https://www.youtube.com/embed/AQXGjOJsgDg",
+    title: {
+      english: "",
+      spanish: "Salud del Público en Santa Ana",
+    },
+  },
+  {
+    download: video11,
+    embed: "https://www.youtube.com/embed/awld0TqAIvU",
+    title: {
+      english: "",
+      spanish: "Vivienda Asequible en Santa Ana",
+    },
+  },
+  {
+    download: video12,
+    embed: "https://www.youtube.com/embed/V13u6qzwLEA",
+    title: {
+      english: "Eva Casas Sarmiento On Vicente's Candidacy",
+      spanish: "Eva Casas Sarmiento On Vicente's Candidacy",
+    },
+  },
 ]
 
 const Container = styled.div`
@@ -164,6 +194,20 @@ const H2 = styled.h2`
   padding-bottom: 7px;
   border-bottom: 5px solid rgb(34, 66, 137);
   margin: 0 15px 15px;
+`
+const Button = styled.a`
+  color: #fff;
+  background-color: rgb(34, 66, 137);
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid rgb(34, 66, 137);
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  :hover {
+    color: rgb(34, 66, 137);
+    background-color: #fff;
+  }
 `
 const images = [
   image1,
@@ -277,35 +321,54 @@ const Gallery = ({ data }) => {
           <div style={{ textAlign: "left", width: "100%" }}>
             <H2>{text.videos[language]}</H2>
           </div>
-          {videos.map((video, index) => (
-            <div className="gallery-image video" key={`video` + index}>
-              <a
-                role="button"
-                tabIndex="0"
-                key={`thumb-${index}`}
-                onClick={() =>
-                  openVideo(video.embed, video.download, video.title[language])
-                }
-                onKeyDown={event =>
-                  handleKeyDown(event, () =>
-                    openVideo(
-                      video.embed,
-                      video.download,
-                      video.title[language]
-                    )
-                  )
-                }
-              >
-                <Img
-                  fluid={data[`video${index + 1}`].childImageSharp.fluid}
-                  alt={image_alts[index]}
-                />
-              </a>
-              <p style={{ textAlign: "left", padding: "1.5%" }}>
-                {video.title[language]}
-              </p>
-            </div>
-          ))}
+          {videos.map((video, index) => {
+            if (index !== 7) {
+              return (
+                <div className="gallery-image video" key={`video` + index}>
+                  <a
+                    role="button"
+                    tabIndex="0"
+                    key={`thumb-${index}`}
+                    onClick={() =>
+                      openVideo(
+                        video.embed,
+                        video.download,
+                        video.title[language]
+                      )
+                    }
+                    onKeyDown={event =>
+                      handleKeyDown(event, () =>
+                        openVideo(
+                          video.embed,
+                          video.download,
+                          video.title[language]
+                        )
+                      )
+                    }
+                  >
+                    <Img
+                      fluid={data[`video${index + 1}`].childImageSharp.fluid}
+                      alt={image_alts[index]}
+                    />
+                  </a>
+                  <p style={{ textAlign: "left", padding: "1.5%" }}>
+                    {video.title[language]}
+                  </p>
+                </div>
+              )
+            } else {
+              return
+            }
+          })}
+          <div>
+            <Button
+              href="https://drive.google.com/drive/folders/1OJG7TJFEis1lmklRz2lZFBY3QySrB-mT?usp=sharing"
+              target="_blank"
+              rel="noopener"
+            >
+              MAS VIDEOS
+            </Button>
+          </div>
           <div style={{ textAlign: "left", marginTop: 20, width: "100%" }}>
             <H2>{text.photos[language]}</H2>
           </div>
@@ -327,6 +390,15 @@ const Gallery = ({ data }) => {
               </a>
             </div>
           ))}
+          <div>
+            <Button
+              href="https://drive.google.com/drive/folders/11P4yF5cHRy1RBRawulfmH8pJixqqkbIQ?usp=sharing"
+              target="_blank"
+              rel="noopener"
+            >
+              MAS FOTOS
+            </Button>
+          </div>
         </Wrapper>
       </Container>
       <Dialog
@@ -800,6 +872,27 @@ export const Images = graphql`
       }
     }
     video9: file(relativePath: { eq: "gallery/video9-poster.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    video10: file(relativePath: { eq: "gallery/video10-poster.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    video11: file(relativePath: { eq: "gallery/video11-poster.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    video12: file(relativePath: { eq: "gallery/video12-poster.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
